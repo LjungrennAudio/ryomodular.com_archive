@@ -1,0 +1,39 @@
+RYO Paths
+
+1. Voltage Controlled / Clocked mode switch.
+
+2. Number of steps select switch. (inactive in CV mode.)
+
+3. Hold Button.
+
+4. Step Rev Button (advances sequence one step backwards). (inactive in CV mode.)
+
+5. Reset Button.
+
+6. Step Forward Button (advances sequence one step forward). (inactive in CV mode.)
+
+7. Hold CV in.
+
+8. In/Out channel 1
+
+9. Out/In channel 1
+
+10. Reset CV in
+
+11. In/Out channel 2
+
+12. Out/In channel 2
+
+13. REV clock input (advances one step in reverse - clockable to 100kHz tested)
+
+14. In/Out channel 3
+
+15. Out/In channel 3
+
+16. FWD clock input (advances one step forward - clockable to 100kHz tested)
+
+17. In/Out channel 4
+
+18. Out/In channel 4
+
+Width: 8 hp

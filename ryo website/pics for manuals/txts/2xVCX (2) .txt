@@ -1,0 +1,38 @@
+Kymatica Devices/RYO 2xVCX
+
+1. Ch 1 CV offset knob  (acts as vca initial, offset for the four quadrant multiplier or bias for the crossfader.)
+
+2. Ch 2 CV offset knob (acts as vca initial, offset for the four quadrant multiplier or bias for the crossfader.)
+
+3. Ch 1 Mode switch:
+
+- Switch A > A; input A and CV input act as Four Quadrand Multiplier.
+- Switch 0 > A; input A and CV input act as normal linear VCA.
+- Switch B > A; CV input controls crossfade from input B to input A.
+
+4. Ch 2 mode switch:
+- See 3.
+
+5. Ch 1 CV attenuator.
+
+6. Ch 2 CV attenuator.
+
+7. Ch 1 CV input.
+
+8. Ch 2 Output.
+
+9. Ch 2 CV input.
+
+10. Ch 1 A input (dc coupled - Works for cv and audio.)
+
+11. Mix output - normalized to CH 2 B input. 
+
+12. Ch 2 A input (dc coupled - Works for cv and audio.)
+
+13. Ch 1 B input (dc coupled - Works for cv and audio.)
+
+14. Ch 1 output.
+
+15. Ch 2 B input (dc coupled - Works for cv and audio.)
+
+Width: 8 hp

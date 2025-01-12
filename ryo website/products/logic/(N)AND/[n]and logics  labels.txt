@@ -1,0 +1,28 @@
+Boolean Logic
+
+Discrete Resistor-Transistor-Logic
+ 
+RTL circuit design gives interesting quirks at Dif input amplitudes, waveforms and frequency rates including audit use as an audio waveshaper/distortion.
+ 
+ 
+NAND/AND
+
+The NAND/AND module can be patched as two NOT gates,
+one NOT gate and one 2- or 3-input NAND/AND gate,
+one 2-input NAND/AND gate and one 2- or 3-input NAND/AND gate
+or one 4-input NAND/AND gate.
+ 
+Gate one has three inputs, the inputs on gate one are normalled 1>2>3
+
+Gate two has two, the inputs on gate two are normalled 1>2
+
+the AND out from gate one in turn being normalled to input 1 on gate two.
+
+Width: 4 hp
+
+
+
+
+
+
+

@@ -1,0 +1,231 @@
+A diode is an electrical device allowing current to move through it in one direction with far greater ease than in the other. The most common kind of diode in modern circuit design is the semiconductor diode, although other diode technologies exist. Semiconductor diodes are symbolized in schematic diagrams such as Figure below. The term “diode” is customarily reserved for small signal devices, I ≤ 1 A
+
+
+
+
+
+
+- CV Mixer	}
+- Audio mixer	} - summing/addition
+- Matrix mixer	}	
+
+- polarising mixers - subtraction
+
+
+four quadrant 8x8 vc matrix mixer pls
+nlc cluster is beyond anything i could do
+i have clump but it is not four quadrant unfortunately
+nor is cluster but how do you fit 8 x 8 sockets and knobs for matrix mixer and 8 x 8 sockets for on one module without it being nlc smd and tiny pots
+its basically undoable
+
+
+
+VCA - multiplication/sqr
+Polarising vas/4quad multipliers/ringmods - multiplication, squaring (freq doubler), division, sqrt, phase angle detection, rectify
+
+The usual candidate for Analog Logic Modules:
+Mannequins - Cold Mac
+Mystic Circuit - ANA
+Mutable Instruments - Kinks
+WMD - OSD
+Intellijel - μMod II
+
+Semi analogue AND - max
+semi analogue OR - min
+
+only the non-inverting logical AND and logical OR functions can be realized by diode gates.
+
+Analogue SORT second largest or second smallest of three - 3 input median
+
+crossfaders
+bi-directional switches with latches
+These are technically not analog logic modules, but they give you interesting results by processing CVs:
+
+- VC Crossfader (e.g. Happy Nerding - XFade / WMD - AXYS) can kinda work as logic module too:
+
+AND GATE aka 'min' = Signal A -> Input 1 / Signal B -> CV (Basically this is same as a linear VCA)
+OR GATE aka 'max' = Signal A -> Input 1 & CV / Signal B -> Input 2
+XOR GATE aka 'ring mod' = Signal A -> Input 1 / Inverted Signal A -> Input 2, Signal B -> CV Input
+
+However, it is limited to gate [I.e. digital] only for AND & OR. Meanwhile, the XOR is true analogue with all CV signals.
+
+
+- Bi-directional switches with latches (e.g. Instruo - Tain / Ritual Electronics - Pointeuse)
+
+momentary mode IF, THEN, ELSE CONDITIONAL LOGIC (1 input to 2 output) = if triggered (>certain voltage threshold), then output 2, else output 1
+momentary mode NOT GATE (2 input to 1 output) = gate is high by default, gate is low when triggered
+latch mode FLIP-FLOP LOGIC (1 input to 2 output) = flip-flops output 1 & output 2 alternatively when triggered
+
+
+inversion - NOT
+
+attenuation - subtraction
+
+
+attenuversion - division/subtraction? Or just -ve subtract?
+
+
+offset - constant 
+
+
+slope detector - comparator/dependent logic 
+
+
+triple comparator which gives every possible boolean gate
+
+
+window comparator with analogue and digital logic outs
+
+
+logic of the slope detecc
+
+latching/momentary dual bidirectional switch which gives conditional if then else logic and flipflop logic
+
+paths 
+imo as gud a sequential switch as you can make
+
+maj - (a and b) or (a and c) or (b and c)
+
+odd par - xor into xor = (A o+ B) o+ C
+
+
+imply - positive rectify?	}
+				} - 3 way rectify module
+nimply - neg rectify?		}
+
+
+
+
+. . . . . . . . . . . . .
+
+
+
+∈ Denotes set membership, and is read "in" or "belongs to". That is, x ∈ X means that x is an element of the set X.
+
+∪ Denotes the union of two sets A and B is the set of elements which are in A, in B, or in both A and B. In symbols, A ∪ B = {x:x ∈ A or x ∈ B}.
+
+∩ Denotes the intersection of two sets A and B is the set of elements which are in both A and B. In symbols, A ∩ B = {x:x ∈ A and x ∈ B} 
+
+∨ Denotes the inclusive disjunction of two sets A and B. Is true if either A or B, or both A and B are true.
+
+∧ Denotes the conjunction of two sets A and B. Is true if both A and B are true. 
+
+
+[Note: copy pasta math for correct symbols]
+
+
+NOT/Inverting:
+- Complement. The complement groups all the elements that do not reside in the set μ(x).
+
+μ̄ (x)=1−μ(x), x ∈ X
+
+
+Gain:
+- mathematically the Scalar product. An analogue set can be multiplied by a scalar S.
+
+μ(x) = S · μ1(x), x ∈ X
+
+
+Square [special case*]
+- mathematically raising to a Power. The power operation elevates an analogue set to a particular number m.
+
+μ(x)=[μ1(x)]m, x ∈ X
+
+*The case m = 2 is known as the concentration of a fuzzy set. 'The concentration is the result of putting the same value into both inputs of a bipolar vca or four quadrant multiplier.
+
+
+Max()/Multiply [diode max, vca, vc fade, 4qm/bpvca/rm]
+- mathematically the Union. The union of two or more analogue sets joins all the elements of the universe of discourse that belong in some degree to any of those sets. This operation can be done with any triangular co-norm. In this particular implementation, we unite fuzzy sets by selecting the maximum values among them.
+
+μ∪(x) = μ1(x) ∨ μ2(x) ∨ … ∨ μn(x) = max(μ1(x), μ2(x), …, μn(x)), x ∈ X
+
+
+Addition [min, mixer/varieties of special mixer]
+- mathematically the Intersection. The intersection of two or more analogue sets extracts all the elements of the universe of discourse that belong in some degree to all of those sets. This operation can be done with any triangular norm. In this particular implementation, we unite fuzzy sets by selecting the minimum values among them.
+
+μ∩(x) = μ1(x) ∧ μ2(x) ∧ … ∧ μn(x) = min(μ1(x), μ2(x), …, μn(x)), x ∈ X
+
+
+. . . . . . . . . . . . . . . . . . 
+
+
+From the above we can derive the math for, for example, a
+- 4x4 matrix mixer:
+
+Any given output is:
+
+	μ∩(xiyo) = μ1(xiyo) ∧ μ2(xiyo) ∧ ... ∧ μn(xiyo) 
+		 = min(μ1(xiyo), μ2(xiyo), μ3(xiyo), μ4(xiyo)), xiyo ∈ XiYo
+
+Where xi is the horizontal row number, and yi the vertical column number
+
+Where a row x1 is:
+
+	μ∩(x1yo) = μ1(x1y1) ∧ μ2(x1y2) ... ∧ μn(x1yo)
+		 = min(μ1(x1y1), μ2(x1y2), μ3(x1y3), μ4(x1y4)), x1yo ∈ X1Yo
+
+And a column y3 is:
+
+	μ∩(xiy3) = μ1(x1y3) ∧ μ2(x2y3) ∧ ... ∧ μn(xiy3)
+		 = min(μ1(x1y3), μ2(x2y3), μ3(x3y3), μ4(x4y3)), xiy3 ∈ XiY3
+
+
+. . . . . . . . . . . . . 
+
+similarly, following some demonstrations it can be demonstrated that the relevant mathematics can be derived for all the above analogue logic tools using just these basic pieces of fuzzy logic mathematics.
+
+
+. . . . . . . . . . . . .
+
+IF, AND, THEN
+
+the min-max method where an analogue rule would have the form:
+
+ IF x1 is A1k  AND  x2 is A2k  THEN  yk is Bk for k=1,2,…
+
+where A1k and A2k are ananlogue inputs and Bk is the desired output.
+
+For r disjunctive analogue IF-THEN rules, the analogue output will be:
+
+μBk(y)=maxk[min[μA1k(input(1)),μA2k(input(2)),…]]  for k=1,2,…,r
+. . . . . . . . . . . . . 
+
+
+Looking at the XOR truth table we can write it out long form: 
+
+XOR truth table
+Input	Output
+A	B
+0	0	0	1 - (A AND B)
+0	1	1	    (A OR B)
+1	0	1	    (A OR B)
+1	1	0	1 - (A AND B)
+
+
+To produce the proof:
+
+A XOR B	= 1 - (A AND B)			      AND	(A OR B)
+	= (1 - A OR 1 - B)  		      AND	(A OR B)
+	= ([A OR 1 - B] AND [1 - A OR 1 - B]) AND 	([A OR B] AND [1 - A OR B])
+	= ([A AND 1 - B] OR 1 - B)	      AND 	([A AND 1 - B] OR B)
+
+
+Therefore
+
+A XOR B = (A AND [1 - B])	  	      OR	((1 - A) AND B)
+
+
+Using the above, we can deduce the mathematical formula for :
+
+
+IF, THEN, ELSE
+
+IF x1 is A1k THEN y1 is Bk ELSE z1 is Ck for k=1,2, ...
+Where A1k is an analogue input and Bk and Ck are outputs. 
+
+
+For r disjunctive analogue IF-THEN rules, the analogue output will be:
+
+uBk(y) = XOR [μA1k, μA2k, …] for k = 1,2,…,r
+uBk(y) = [1 - μA1k AND μA2k] OR [1 - … AND …] for k = 1,2,…,r 
+μBk(y) = min[max[1 - μA1k(input1),μA2k(input2)],max[1 - …, …]] for k = 1,2,…,r

@@ -1,0 +1,171 @@
+TOOLS
+
+Side Cutters
+Mini 125mm Long Nose Pliers
+Automatic Wire Stripper
+
+Adjustable temperature Soldering Station
+Desolder Pump/Desoldering Braid [I prefer the pump]
+Solder
+Stainless Steel Tweezers
+"Helping Hands" type Assembly Aid, with magnifying glass
+[optional: Handheld magnifying glass if you can't see the heccin resistor colour codes, & diode and capacitor labelling]
+
+Digital Multimeter: measurement of Vdc, Vac, Iac, Idc, Resistance, Capacitance, audible continuity [diode test, transistor test - optional]
+[optional: oscilloscope - I use a rigol ds1052e, possibly the most ubiquitous scope in the industry, nay the world!]
+
+IC Extractor Tool
+
+
+
+ICs
+
+cd4017b		decade counter used for sequencers & more
+cd4066b		quad switch
+cd40106b	hex inverter with Schmidt triggers
+
+LM13700		transconductance amplifier - a good way to cv stuff
+
+TL072		dual opamp
+LM311		dual comparator
+
+555 Timer	multipurpose tool
+PT2399		delay [echo]
+
+
+
+RESISTORS
+
+carbon film resistors
+10R, 100R, 1k, 10k, 100k, 1M			  10x [1/4W 5%]
+15R, 150R, 1k5, 15k, 150k			  10x [1/4W 5%]
+22R, 220R, 2k2, 22k, 220k			  10x [1/4W 5%]
+47R, 470R, 4k7, 47k, 470k			  10x [1/4W 5%]
+56R, 560R, 5k6, 56k, 560k			  10x [1/4W 5%]
+68R, 680R, 6k8, 68k, 680k			  10x [1/4W 5%]
+82R, 820R, 8k2, 82k, 820k			  10x [1/4W 5%]
+1M5, 2M2					  2x  [1/4W 5%]
+
+
+
+CAPACITORS
+
+Ceramic Disc Capacitors				  20x [+/- 0.25pF]
+1pF, 10pF, 33pF, 47pF, 100pF, 470pF, 1nF, 210nF, 100nF
+
+Electrolytic Capacitors, Radial			  
+1uF 50V						  10x  [85 deg]
+2.2uF 63V					  10x  [85 deg]
+4.7uF 40V					  5x   [85 deg]
+10uF 25V					  20x  [85 deg]
+22uF 25V					  5x   [85 deg]
+47uF 25V					  10x  [85 deg]
+100uF 25V					  10x  [85 deg]
+220uF 16V					  5x   [85 deg]
+
+
+
+DIODES
+
+1N4148			Signal Diode		  4x  [100V 300mA]
+
+3.3V BZX55		Zener Diode		  1x  [500mW]
+3.6V BZX55		Zener Diode		  1x  [500mW]
+5.1V BZX55		Zener Diode		  1x  [500mW]
+5.6V BZX55		Zener Diode		  1x  [500mW]
+6.2V BZX55		Zener Diode		  1x  [500mW]
+6.8V BZX55		Zener Diode		  1x  [500mW]
+9.1V BZX55		Zener Diode		  1x  [500mW]
+12V  BZX55		Zener Diode		  1x  [500mW]
+
+
+
+Transistors
+BC547B			Transistor		  1x  [NPN TO92]
+BC557B			Transistor		  1x  [PNP TO92]
+BS170			N-channel MOSFET   	  1x  [60V 500mA TO92]
+BF245			N-Channel J-FET		  1x  [30V 6-15mA TO92]
+
+
+
+HARDWARE
+
+3.5mm Mono Jack Socket	PCB mount, Vertical or Horizontal
+Switched contact optional.			  10x
+
+9mm with round 6.35mm metal shaft. For pcb and/or panel mounting.
+10k Linear					  2x
+10k Log						  1x
+25k Linear					  1x
+50k Linear					  2x
+50k Log						  2x
+100k Linear					  5x
+100k Log					  2x
+500k Linear					  1x
+1M Linear					  1x
+
+[optional:
+Selection of various Horizontal Finger Adjust trim pots.
+trimmer pot adjustment tool.]
+
+Miniature Toggle Switch	 SPDT, 			  2x  [5A/125Vac 2A/250Vac.]
+(choose type as seems most useful: e.g. ON-ON, ON-OFF-ON etc.)
+
+
+OPTO-ELECTRONICS
+
+Selection of 10-15 various colour 3mm LEDs, any luminous intensity [mcd]
+
+[optional: NSL32 - Optocoupler with resistive output.2X [Observe polarity]
+	  
+		   H11L1M Optocoupler, High speed optoisolator with Schmitt 		   trigger output. 6-pin DIL.]
+
+
+
+PROTOTYPING
+
+2x Solderless Prototyping Breadboard 172mm x 63mm, 840 tie points. [Multiple boards can be locked together for larger prototyping areas.]
+
+Approx 100 male/male jumpers for use with breadboards, various lengths with solid tips.
+
+
+
+...
+
+FOR POWER
+
+
+You'll with need a lab/bench-top type psi, or alternatively, you can get a smog eurorack psi like the tiptop happy ending kit [hek].
+
+- The lab psi's have pro's: stable, accurate power to be dialled in at whatver voltage and amperage you choose
+
+- The hek has the pro's: provides actual real life eurorack module power to see the effects of actual setups effects. 
+- Bonus pro's: holds maybe 7-10 eurorack modules in a little desktop skeleton rack, allowing a set of vco/vca/eg/lfo/filter/etc as test modules! 
+- (See how your breadboard circuits behave with and respond to real life eurorack modules!)
+
+
+
+FOR RYO PROTECTED BREADBOARD POWER [optional:]
+
+Solderless Prototyping Breadboard 80mm x 60mm, 390 tie points: 29 columns in 2 banks of 5 plus 4 rows of 25
+
+
+- [if using an hek or similar to power the breadboard:
+8-Way single red-stripe ribbon cable approx 30cm length,
+female 16-pin IDC connector,
+(optional, and highly convenient: idc crimping tool).]
+
+- [if using a bench-top/lab psu to power the breadboard:
+lab/bench-top PSU, 
+Approx 30cm of 4 x Dif colour solid core wire to connect psi to the breadboard.]
+
+
+10r			Resistors, carbon film	  2x  [1/4W 5%]
+
+5x 100nF		Ceramic Disc Caps	  5x  [+/- 0.25pF]
+2x 10uF			Electrolytic Caps, radial 2x  [85 deg]
+1x 100uF		Electrolytic Cap, radial  1x  [85 deg]
+
+LM2391			Voltage Regulator	  1x  [TO92 package]
+
+2x 1N5818 Diodes	Schottky Rectifier Diode. 2x  [30V 1A 0.5Vf]

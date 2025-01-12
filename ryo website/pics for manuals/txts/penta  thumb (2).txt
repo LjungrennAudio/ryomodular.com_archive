@@ -1,0 +1,32 @@
+RYO Penta
+
+1. Pattern length switch (3, 4 or 5 steps; can also be set by external gate/trig into RST  input.)
+
+2. Active step indicator LED.
+
+3. minishaft knob for step cv level.
+
+4. minishaft knob for step cv level.
+
+5. Active step indicator LED.
+
+6. minishaft knob for step cv level.
+
+7. Active step indicator LED.
+
+8. Active step indicator LED.
+
+9. minishaft knob for step cv level.
+
+10. minishaft knob for step cv level.
+
+11. Active step indicator LED.
+
+12. Reset CV input.
+
+13. Clock input.
+
+14. 0 to +5V buffered output.
+
+Width: 4hp 
+

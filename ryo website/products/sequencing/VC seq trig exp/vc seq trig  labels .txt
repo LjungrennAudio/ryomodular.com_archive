@@ -1,0 +1,14 @@
+Trig Xpander (for VC Sequencer)
+ 
+This will give your VC Sequencer 8 individual outputs for each step 
+
+outputting either a trigger or a gate, selectable with a jumper on the pcb, 
+
+9th output that gives you a trigger for each step progression.
+ 
+(trimmer sets the trigger length to between approx 1-20 ms.)
+The gates are high for the full duration of each step.
+ 
+The outputs are diode isolated for passive mixing using passive multiples, stackcables, switched multiples and OR combiners such as the Doepfer A-182 or Low-Gain Short Bus.
+
+Width: 4hp

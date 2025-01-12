@@ -1,0 +1,87 @@
+Bear with me here. . .
+
+Given that:
+
+z = x + y = 100 - ( 100 - ( x + y ) )
+z = 32 + 43= 100 - ( 100 - ( 32 + 43 ) )
+Z = 100 - 25
+Z = 75
+
+is true;
+
+And, one can add numbers together using nothing but subtraction [!]; I’ll demonstrate -  rather than adding both numbers together, lets subtract them both from 100, then subtract the answer from 100 - using values of 32 and 43 as examples, normally the calculation would be something like:
+
+z = x + y
+z = 32 + 43
+z = 75
+
+
+Using the equation above:
+
+z = 100 - ( 100 - ( x + y ) )
+z = 100 - ( 100 - ( 32 + 43 ) )
+z = 100 - ( 100 - 75 )
+z = 100 - ( 25 )
+z = 75
+
+This _looks_ ridiculously long-winded when written down like that, but, when your toolsets are limited you have to work with what you've got.
+
+however, if you remember that the above equation;
+
+z = 100 - ( 100 - ( x + y ) )
+
+Can be rewritten as:
+
+z = 100 - (( 100 - x ) + ( - y ))
+
+And,
+
+[ note		|x| represents the absolute value of x where		]
+[									]
+[		|s| = |-s|						]
+[		  0 ≤ |s|						]
+[									]		
+
+- NOT gates perform the analogue function ( 100 - |x| ), and,
+- IMPLY gates (OR with an inverting input on one in),
+Since OR gates perform addition, 
+
+one can simplify this to give the following circuit for basic addition with 2 inputs:
+
+x	—>	|NOT|	—> 	|IMPLY +ve|
+				|	  | —> |NOT| —> z
+y			—>	|IMPLY -ve|
+
+Still long winded and could have just been done with just OR gates? Look what happens when we extend the number of inputs:
+
+v —>  |NOT| —>	|IMPLY +ve|
+		|         |  —> |IMPLY +ve|
+w —-------———>	|IMPLY -ve|	|         | —>  |IMPLY +ve|
+x —-------————————————————————>	|IMPLY -ve|	|         | —> |NOT| —> z
+y —-------———————————————————————————————————>  |IMPLY -ve|	
+			
+i.e. it can then be extended for any number of inputs, and that the inversions only need to be carried out at the beginning and end of the calculation - everything in between is IMPLY gates alone - simple subtraction.
+
+This is relevant because an inverting mixer is just the inverted top input, the inverted input of each other input into summers [or ORs, i.e. IMPLY gates] with a final inverter at the end - I.e. each stage of NOT or IMPLY can be replaced by an inverting opamp stage so only a quad, dual and quad or pair of quad pampas will usually suffice for a whole mixer!
+
+Even better, you can extend this demonstration of logic into math to show the same runs true for addition and subtraction together [attenuverting mixers] or even switched attenuverting/non and [scaleable (i.e. with gain on the non-inverting) mixers - often making there a possibility of multiplying certain factors]. Also consider static dc offsets in the mix as an option when nothings plugged in - a normaled offset gives a constant number c in the z = c + (x + y) equation, or can be used in more complex ways if extra math is occurring!
+
+what's super cool is this is true for binary logic with not and imply gates - basic 1s and 0s a computer churns through and we use for trigs, gates, clocks, etc, but its as above totally analogue logic capable too - so one can use mixers as adders and hence also OR gates as interchangeably as needed with the treat that we can feed in any continuously variable data source - i.e. constant varying voltages, ac, into fractions of a voltage as smol as divisions will make any difference or the until the limits of the electronics is reached. 
+the mixer, whether an analogue OR gate from a pair of diodes reverse biased and stuck together, a chain of inverting opamps, or some transistor NOT gates, OR gates and other combos of transistors and diodes (TTL), transistors/diodes/resistors (RTL) or any other logic is still mixing something and hence can perform addition at bare minimum - possibly the most valuable tool in your electronic tool box for modular synthesis - they join everything else together 
+
+why non-inverting buffers/mixing is bad but what are some disadvantages of non-inverting? 
+So using a non-inverting buffer with resistors doesn't sum?  
+the main issue is balance - the top mixer is balanced by the 10k over the opamp while the bottom one is unbalanced 
+see balancun mix.png
+
+it has to do with virtual ground, at the convergence point the node is 0v net  
+The relevance of this point is that it gets weird when you upgrade the resistors to pots - as soon as you breadboard it and start changing values with the pots, variations are created with the non-inverting and it all gets screwy in places... 
+mostly the disadvantages are to do with the situations when you have one pot affecting another, things forming filters, things bleeding etc - inverting buffers don't need and extra stage to avoid the fact you need to first attenuate or mix or gain or whatever then add a buffer then sum and the summer will be inverting so you'll need another inverter to make the sum positive.  its fine with just two signals, inverting gives the minimum number of steps to mix more than two. try it with three four or five - two signals you can do in a dual or quad opamp, 3, 4 or 5 is a lot pf opamps non-inverting. best way to see is breadboard it and try wiggling knobs with.a scope hooked up - feeling it out in the real world is a lot more educational than math, logic, words or simulators but a simulator will do fine for this:  watch for things like voltage droops at all points [you don't want em happening at ins or outs - cables are relevant as well as internally], and likewise monitor amps flowing through things [it may mostly be mA, but there's still heat dissipation etc.] and also monitor across a whole range of frequencies, both dc, ac, moving/static etc  look at everything and decide if you are happy  (if you're lucky you accidentally connect +12v straight to ground or get opamp wrong way round and the power shorts, fuse or protection resistor goes bang and you get magic smonk - yay!)  mainly i'd argue specifically inverting is better when it comes to multiple input [i.e.more than two] mixers because you need less opamps total to not get weird mixing artefacts with the pots  but,  as soon as you start adding attenuversion or gain etc it becomes absolutely essential because some of that simply requires a negative feedback resistor and feedback connections that are unavoidably inverting opamp setups  rarely is there a call for just a simple 2 input non inverting mixer setup in a single module that is just a mixer so usually you're wanting inverting configurations
+ non-inverting two input mixing is relevant sometimes in mixing together two parts of a module like a high pass and low pass feeding together for example but in reality that usually feeds perhaps an output gain stage or whatever so you end up wanting to invert the signal anyways, so inverting mixers as ever usually end up used just to save extra stages and minimise opamp totals.  
+
+
+regarding ideal values for the input/feedback resistor pairs; 
+
+
+i like 47k, but, if i'm using attenuversion in a mixer then i use 100k cos the pots can be 100k and its easy to get the pots  if its for some reason internal in a module and smol values are being used i might use 10k occasionally but thats rare  i like 47k because it leaves room both sides to scale down or up, its the middle number on the E series and its not huge heat dissipation anywhere or a crazy vulnerable to being off if its a 1%      why is the standard value 47 and not 50?  
+look at the E series:  1, 2.2, 3.3, 4.7, 5.6, 6.8, 7.5, 8.2, 9.1, 10  graph it [wow, is E just short for exponential? that's fair though, i'm reading the wikipedia now] - its to do with how resistors are easiest to make relatively accurately, cheaply and durable/mass produced in factories without measuring each one and winding a wire until the right resistance is reached etc (edited). they can just machine dose out carbon or whatever powder and dip in ceramic etc.

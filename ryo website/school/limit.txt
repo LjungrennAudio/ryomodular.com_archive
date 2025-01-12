@@ -1,0 +1,45 @@
+Limiter
+
+. . . . . . . . . . . . . . . .
+
+
+
+				centering offset --->		 limited
+High Offset--------->					mixer -> out wave ac
+			AND ------------------------>	
+Ac wave in ->
+		OR ->
+Low offset ->
+
+
+. . . . . . . . . . . . . . . .
+
+
+				constant c3 ---->
+C2 -------------------->				sum ---> trapezoid	
+			  max() ---------------->
+Tri	->
+		min() ->
+c1	->
+
+
+. . . . . . . . . . . . . . . .
+
+
+If c1 is 20, c2 is 80 and c3 is 50
+
+At any given time, the voltage of the limited waveform output an be calculated by the equation:
+
+Max (Min (Vtri, c1), c2) + c3
+
+
+. . . . . . . . . . . . . . . .
+
+
+finally integrating the trapezoid waveform will give a very good approximation of a sin wave.
+
+
+
+
+
+f(x) = (2/π) sin-1[sin (π x)] 

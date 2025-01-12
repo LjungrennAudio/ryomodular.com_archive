@@ -1,0 +1,291 @@
+{\rtf1\fbidis\ansi\deff0\nouicompat{\fonttbl{\f0\fmodern\fprq1\fcharset128 Andale Mono;}{\f1\froman\fprq2\fcharset0 Times New Roman;}{\f2\fmodern\fprq1\fcharset0 Andale Mono;}{\f3\fnil\fcharset0 Arial Black;}{\f4\fmodern\fprq1\fcharset161 Andale Mono;}{\f5\fswiss\fprq2\fcharset161 Arial Black;}{\f6\fnil\fcharset1 Cambria Math;}{\f7\fswiss\fprq2 Arial Black;}{\f8\fswiss\fprq2\fcharset0 Arial Black;}{\f9\fnil\fcharset161 Arial Black;}{\f10\fnil Arial Black;}{\f11\fswiss\fprq2\fcharset128 Arial Black;}{\f12\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont6\mwrapIndent1440 }\viewkind4\uc1 
+\pard\nowidctlpar\f0\fs24\lang1023 [\i previous pages on diodes and Op~Amps omitted\i0 ]\f1\par
+\f0 This knowledge of Diodes and OpAmps gives us the tools to construct near every form of analogue logic circuit that can be built:\f1\par
+\par
+\par
+\f0 - \b CV Mixer\b0\tab\f2\lang2057\tab\f0\lang1023\}\f1\par
+\f0 - \b Audio mixer\b0\tab\} - use opamps to perform \b summing/addition\b0\f1\par
+\f0 - \b Matrix mixer\b0\tab\}\tab\f1\par
+\f0 - \b polarising mixers\b0  \endash  use opamps to further perform \b subtraction\b0  also.\f1\par
+\par
+\par
+\f0 - \b VCA\b0  \endash  uses operational transconductance amplifiers or transistors configured as vc variable resistors to perform \b multiplication and squaring\b0\f1\par
+\f0 - \b Polarising vas/4quad multipliers/ringmods\b0  \endash  use the same circuitry as VCAs to perform \b multiplication, squaring (freq doubleing), division, square root, phase angle detection and  rectification.\b0\f1\par
+\par
+\par
+\f0 - semi analogue AND \endash  \b max\b0  functions achieved via \b diode AND\b0  circuits perform certain analogue functions but not the full range a VCA does.\f1\par
+\f0 - semi analogue OR \endash  \b min\b0  functions achieved via \b diode OR\b0  circuits can perform certain analogue functions but not the full range an opamp mixer can.\f1\par
+\f0 [only the non-inverting logical AND and logical OR functions can be realized by diode gates].\f1\par
+\par
+\par
+\f0 - Analogue \b SORT\b0  second largest or second smallest of three \endash  when using a 3 input diode logic circuit gives \b analogue median\b0 .\f1\par
+\par
+\par
+\f0 - crossfaders\f1\par
+\b\f0 VC crossfaders\b0  can kinda work as logic modules:\f1\par
+\par
+\f0 - \b AND GATE\b0  aka 'min' = Signal A -> Input 1 / Signal B -> CV (Basically this is same as a linear VCA)\f1\par
+\f0 - \b OR GATE\b0  aka 'max' = Signal A -> Input 1 & CV / Signal B -> Input 2\f1\par
+\f0 - \b XOR GATE\b0  aka 'ring mod' = Signal A -> Input 1 / Inverted Signal A -> Input 2, Signal B -> CV Input\f1\par
+\par
+\f0 note, however, AND & OR are limited to gate [i.e. digital] only outputs, whereas, the \b XOR\b0  \b is\b0  \b true analogue\b0  with all CV signals.\f1\par
+\par
+\par
+\f0 - \b bi-directional switches\b0\f1\par
+\f0 - whilst not technically true analogue logic, they give interesting results when processing Cvs and sometimes even audio:\f1\par
+\f0 - \b momentary\b0  mode produces (if 1 input to 2 output) \b IF, THEN, ELSE\b0  \b CONDITIONAL LOGIC\b0  functions when triggered (>certain voltage threshold), then output 2, else output 1.\f1\par
+\par
+\f0 - \b momentary\b0  mode produces (when 2 input to 1 output) a \b NOT GATE\b0  - if the gate is high by default, gate is low when triggered.\f1\par
+\par
+\f0 - \b latch\b0  mode produces (if 1 input to 2 output) \b FLIP-FLOP LOGIC\b0  when triggered - flip-flops output 1 & output 2 alternate.\f1\par
+\par
+\par
+\f0 - \b OpAmp inverters\b0  make an analogue inversion \endash  i.e. a \b NOT\b0  function.\f1\par
+\par
+\par
+\f0 - \b attenuation\b0  \endash  even the most basic manual attenuator, a simple passive potentiometer or even static pad type level reducer is performing a \b subtraction\b0  function.\f1\par
+\par
+\par
+\f0 - \b attenuversion\b0  \endash  see above \endash  \b signed subtraction\b0 ?\f1\par
+\par
+\par
+\f0 - \b offset\b0  \endash  static offset voltage sources provide the function of a mathematical \b constant\b0  function in a given calculation or circuit. \f1\par
+\par
+\par
+\f0 - \b slope detector & comparators\b0  \endash  perform \b dependent logic\b0  functions although their outputs are digital not analogue.\f1\par
+\f0 - with only \b three comparators\b0 , \b any possible boolean gate\b0  can be constructed.\f1\par
+\f0 - \b window comparator???\b0\f1\par
+\par
+\par
+\f0 - \b sequential switches\b0  and \b matrices\b0  \endash  a variety of \b complex\b0  logic funtions such as multi-operation math functions similar to the \b IF, THEN, ELSE and FLIPFLOP\b0  logic achievable by momentary and latching bi-directional switches. \f1\par
+\par
+\par
+\b\f0 Majority\b0  logic built from diodes can give an analogue \b '(a and b) or (a and c) or (b and c)'\b0  function.\f1\par
+\par
+\par
+\f0 - \b odd/even parity\b0  constructed from diodes - XOR into XOR gives \b '(A o+ B) o+ C'\b0  functions.\f1\par
+\par
+\par
+\f0 - \b imply\b0  gates built from diodes \endash  result in \b positive rectification\b0 ? [3 way rectify module?]\f1\par
+\f0 - \b nimply\b0  gates from diode logic \endash  result in [\b neg rectification??\b0 ]\f1\par
+\par
+\par
+\par
+\b\f3 . . . . . . . . . . . . . \b0\f1\par
+\par
+\par
+\par
+\b\f0\fs28 SOME IDEAS FOR FINDING ANALOGUE LOGIC IN EURORACK:\b0\f1\fs24\par
+\par
+\f0\fs26 Some readily available analogue logic modules in the eurorack world can be listed off easily, but not all are apparent to everyone as having analogue logic possibilities.\f1\fs24\par
+\par
+\f0\fs26 The usual candidate for Analog Logic Modules that spring to mind:\f1\fs24\par
+\f0 - \b Mannequins\b0  - Cold Mac\f1\par
+\f0 - \b Mystic Circuits\b0  - ANA\f1\par
+\f0 - \b Mutable Instruments\b0  - Kinks\f1\par
+\f0 - \b WMD\b0  - OSD\f1\par
+\f0 - \b Intellijel\b0  - \f4\lang1032\'ecMod II\f1\lang1023\par
+\f0 - \b Ladik\b0  \endash  Median, \f1\par
+\f0 - Any min/max \endash  there's so many out there I don't need to list em!\f1\par
+\f0 - \f1\par
+\par
+\par
+\f0\fs26 Less obvious ones you may now want to think about:\f1\fs24\par
+\par
+\f0 crossfaders e.g.\f1\par
+\f0 - \b Happy Nerding\b0  \endash  Xfade\f1\par
+\f0 - \b WMD\b0  \endash  AXYS\f1\par
+\f0 - \b RYO/Kymatica Devices\b0  - 2xVCX\f1\par
+\f0 - \f1\par
+\par
+\par
+\f0\fs26 Bi-directional momentary switches and switches with latches e.g.\f1\fs24\par
+\f0 - \b Instruo\b0  \endash  Tain\f1\par
+\f0 - \b Ritual Electronics\b0  - Pointeuse\f1\par
+\f0 - \b RYO\b0  \endash  DT Switch\f1\par
+\f0 - \b RYO\b0  - Paths\f1\par
+\par
+\par
+\f0\fs26 also consider:\f1\fs24\par
+\f0 - vc slope gens, slew limiters and other DUSG type modules such as \b Makenoise\b0  Maths or the \b Doepfer\b0  A-171-2\f1\par
+\f0 - slope detectors\f1\par
+\f0 - envelope followers\f1\par
+\f0 - s&h/t&h\f1\par
+\f0 - envelopes and contour generators\f1\par
+\f0 - unusual mixers\f1\par
+\f0 - static offset voltage sources\f1\par
+\f0 - \f1\par
+\par
+\par
+\f0 in other words many basic utilities and everyday 'plain basic building block' type modules prove to be the best analogue logic tools, and always remember: feedback can do wonderful things!\f1\par
+\par
+\par
+\par
+\par
+\par
+\b\f3\fs20 . . . . . . . . . . . . . \fs24 . . . . . . . . . . . . . \fs20 . . . . . . . . . . . . . \fs24 . . . . . . . . . . . . .\b0\f1\par
+\par
+\par
+\par
+\i\f0 The following math derivations and calculations are purely for the intellectual interest of those who have survived this far \endash  they are in no way essential to understand anything else on this site or any of the patch ideas, module modifications or anything else I write about:\i0\f1\par
+\par
+\par
+\b\f0\'81\'b8\b0  Denotes set membership, and is read "in" or "\b belongs to\b0 ". That is, x \'81\'b8 X means that x is an element of the set X.\f1\par
+\par
+\par
+\b\f0\'81\'be\b0  Denotes the union of two sets A and B is the set of elements which are \b in A, in B, or in both A and B\b0 . In symbols, A \'81\'be B = \{x:x \'81\'b8 A or x \'81\'b8 B\}.\f1\par
+\par
+\par
+\b\f0\'81\'bf\b0  Denotes the intersection of two sets A and B is the set of elements which are \b in both A and B\b0 . In symbols, A \'81\'bf B = \{x:x \'81\'b8 A and x \'81\'b8 B\} \f1\par
+\par
+\par
+\b\f0\'81\'c9\b0  Denotes the inclusive disjunction of two sets A and B. Is true if \b either A or B, or both A and B\b0  are true.\f1\par
+\par
+\par
+\b\f0\'81\'c8\b0  Denotes the conjunction of two sets A and B. Is true if \b both A and B\b0  are true. \f1\par
+\par
+\par
+\par
+\b\f3\fs20 . . . . . . . . . . . . . \fs24 . . \b0\f1\par
+\par
+\f0 Now to use those symbols to aid us in mathematically demonstrating the workings of analogue logic:\f1\par
+\par
+\b\f0 NOT/Inverting:\b0\f1\par
+\f0 - Complement. The complement groups all the elements that do not reside in the set \f4\lang1032\'ec(x).\f1\lang1023\par
+\par
+\f5\fs20\lang1032\'ec\u772? (x) = 1 \f6\u8722?\f7\lang1032  \f5\'ec (x),  x \f6\u8712?\f7\lang1032  \f5 X\f1\fs24\lang1023\par
+\par
+\b\f3 . . . . . . . . . . . . .\b0\f1\par
+\par
+\b\f0 Gain:\b0\f1\par
+\f0 - mathematically the Scalar product. An analogue set can be multiplied by a scalar S.\f1\par
+\par
+\f5\fs20\lang1032\'ec(x) = S \f8\lang2057\'b7 \f5\lang1032\'ec1(x), x \f6\u8712?\f7\lang1032  \f5 X\f1\fs24\lang1023\par
+\par
+\b\f3 . . . . . . . . . . . . .\b0\f1\par
+\par
+\b\f0 Square:\b0  [special case*]\f1\par
+\f0 - mathematically raising to a Power. The power operation elevates an analogue set to a particular number m.\f1\par
+\par
+\f5\fs20\lang1032\'ec(x)=[\'ec1(x)]m, x \f6\u8712?\f7\lang1032  \f5 X\f1\fs24\lang1023\par
+\par
+\f0 *The case m = 2 is known as the concentration of a fuzzy set. 'The concentration is the result of putting the same value into both inputs of a bipolar vca or four quadrant multiplier.\f1\par
+\par
+\b\f3 . . . . . . . . . . . . .\b0\f1\par
+\par
+\b\f0 Max()/Multiply:\b0  [diode max, vca, vc fade, 4qm/bpvca/rm]\f1\par
+\f0 - mathematically the Union. The union of two or more analogue sets joins all the elements of the universe of discourse that belong in some degree to any of those sets. This operation can be done with any triangular co-norm. In this particular implementation, we unite fuzzy sets by selecting the maximum values among them.\f1\par
+\par
+\f5\fs20\lang1032\'ec\f7\u8746?\f5 (x) = \'ec1(x) \f6\u8744?\f7\lang1032  \f5\'ec2(x) \f6\u8744?\f7\lang1032  \'85 \f6\u8744?\f7\lang1032  \f5\'ecn(x) = max(\'ec1(x), \'ec2(x), \f7\'85\f5 , \'ecn(x)), x \f6\u8712?\f7\lang1032  \f5 X\f1\fs24\lang1023\par
+\par
+\b\f3 . . . . . . . . . . . . .\b0\f1\par
+\par
+\b\f0 Addition:\b0  [min, mixer/varieties of special mixer]\f1\par
+\f0 - mathematically the Intersection. The intersection of two or more analogue sets extracts all the elements of the universe of discourse that belong in some degree to all of those sets. This operation can be done with any triangular norm. In this particular implementation, we unite fuzzy sets by selecting the minimum values among them.\f1\par
+\par
+\f5\fs20\lang1032\'ec\f7\u8745?\f5 (x) = \'ec1(x) \f6\u8743?\f7\lang1032  \f5\'ec2(x) \f6\u8743?\f7\lang1032  \'85 \f6\u8743?\f7\lang1032  \f5\'ecn(x) = min(\'ec1(x), \'ec2(x), \f7\'85\f5 , \'ecn(x)), x \f6\u8712?\f7\lang1032  \f5 X\f1\fs24\lang1023\par
+\par
+\par
+\b\f3 . . . . . . . . . . . . . . . . . . . . . . . . . . .\b0\f1\par
+\par
+\par
+\f0 From the above we can derive the math for, for example, a \b 4x4 matrix mixer\b0 :\f1\par
+\par
+\f0 Any given output is:\f1\par
+\par
+\b\f9\fs20\lang1032\'ec\f10\u8745?\f9 (xiyo)\tab = \'ec1 (xiyo) \f6\u8743?\f10\lang1032  \f9\'ec2 (xiyo) \f6\u8743?\f10\lang1032  \f9 ... \f6\u8743?\f10\lang1032  \f9\'ecn (xiyo) \f3\fs24\lang1023\par
+\fs20\tab\tab = min (\f9\lang1032\'ec1 (xiyo), \'ec2 (xiyo), \'ec3 (xiyo), \'ec4 (xiyo)), xiyo \f6\u8712?\f10\lang1032  \f9 XiYo\b0\f1\fs24\lang1023\par
+\par
+\f0 Where xi is the horizontal row number, and yi the vertical column number\f1\par
+\par
+\f0 Where a row x1 is:\f1\par
+\par
+\b\f9\fs20\lang1032\'ec\f10\u8745?\f9 (x1yo)\tab = \'ec1 (x1y1) \f6\u8743?\f10\lang1032  \f9\'ec2 (x1y2) ... \f6\u8743?\f10\lang1032  \f9\'ecn (x1yo)\f3\fs24\lang1023\par
+\fs20\tab\tab = min (\f9\lang1032\'ec1(x1y1), \'ec2 (x1y2), \'ec3 (x1y3), \'ec4 (x1y4)), x1yo \f6\u8712?\f10\lang1032  \f9 X1Yo\b0\f1\fs24\lang1023\par
+\par
+\f0 And a column y3 is:\f1\par
+\par
+\b\f9\fs20\lang1032\'ec\f10\u8745?\f9 (xiy3)\tab = \'ec1 (x1y3) \f6\u8743?\f10\lang1032  \f9\'ec2 (x2y3) \f6\u8743?\f10\lang1032  \f9 ... \f6\u8743?\f10\lang1032  \f9\'ecn (xiy3)\f3\fs24\lang1023\par
+\fs20\tab\tab = min (\f9\lang1032\'ec1(x1y3), \'ec2 (x2y3), \'ec3 (x3y3), \'ec4 (x4y3)), xiy3 \f6\u8712?\f10\lang1032  \f9 XiY3\b0\f1\fs24\lang1023\par
+\par
+\par
+\b\f3 . . . . . . . . . . . . . . . . . . . . . . . . . .\b0\f1\par
+\par
+\par
+\f0 similarly, following some expanding of/breaking down into basic concepts it can be demonstrated that the relevant mathematics can be derived for all the above analogue logic tools using just these basic pieces of fuzzy logic mathematics.\f1\par
+\par
+\par
+\b\f3 . . . . . . . . . . . . . . . . . . . . . . . . . .\b0\f1\par
+\par
+\par
+\i\f0 IF, AND, THEN\i0\f1\par
+\par
+\f0 the min-max method where an analogue rule would have the form:\f1\par
+\par
+\f0  \b\f3\fs20 IF x1 is A1k  AND  x2 is A2k  THEN  yk is Bk for k=1,2,\f11\'81\'63\b0\f1\fs24\par
+\par
+\f0 where A1k and A2k are ananlogue inputs and Bk is the desired output.\f1\par
+\par
+\f0 For r disjunctive analogue IF-THEN rules, the analogue output will be:\f1\par
+\par
+\f5\fs20\lang1032\'ecBk(y)\tab  = max k [min [\'ecA1k (input (1)), \'ecA2k (input (2)), \f7\'85 \f5 ]]  for k = 1, 2, \f7\'85\f5 , r\f1\fs24\lang1023\par
+\par
+\par
+\f0 Looking at the XOR truth table we can write it out long form: \f1\par
+\par
+
+\pard\nowidctlpar\qc\b\f0 XOR truth table\b0\f1\par
+\par
+\trowd\trgaph10\trpaddl10\trpaddr10\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrt\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx3855\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrt\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx7710\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrt\brdrw1\brdrs\brdrcf1\clbrdrr\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx9637 
+\pard\intbl\nowidctlpar\qc\b\f0 Input\b0\f1\cell\b\f0 Output\b0\f1\cell 
+\pard\intbl\noline\cell\row\trowd\trgaph10\trpaddl10\trpaddr10\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx1927\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx3854\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx5781\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx7708\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrr\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx9635 
+\pard\intbl\nowidctlpar\qc\b\f0 A\b0\f1\cell\b\f0 B\b0\f1\cell 
+\pard\intbl\noline\qc\b\f0 A + B \b0\f1\cell\b\f0 A x B\b0\f1\cell\cell\row\trowd\trgaph10\trpaddl10\trpaddr10\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx1927\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx3854\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx5781\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx7708\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrr\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx9635 
+\pard\intbl\nowidctlpar\qc\f0 0\f1\cell 
+\pard\intbl\noline\qc\f0 0\f1\cell\f0 0\f1\cell\f0 1\f1\cell\b\f0 (A AND B)\b0\f1\cell\row\trowd\trgaph10\trpaddl10\trpaddr10\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx1927\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx3854\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx5781\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx7708\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrr\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx9635 
+\pard\intbl\noline\qc\f0 0\f1\cell\f0 1\f1\cell\f0 1\f1\cell\f0 0\f1\cell\b\f0 (A OR B)\b0\f1\cell\row\trowd\trgaph10\trpaddl10\trpaddr10\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx1927\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx3854\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx5781\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx7708\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrr\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx9635 
+\pard\intbl\noline\qc\f0 1\f1\cell\f0 0\f1\cell\f0 1\f1\cell\f0 0\f1\cell\b\f0 (A OR B)\b0\f1\cell\row\trowd\trgaph10\trpaddl10\trpaddr10\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx1927\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx3854\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx5781\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx7708\clbrdrl\brdrw1\brdrs\brdrcf1\clbrdrr\brdrw1\brdrs\brdrcf1\clbrdrb\brdrw1\brdrs\brdrcf1 \cellx9635 
+\pard\intbl\noline\qc\f0 1\f1\cell\f0 1\f1\cell\f0 0\f1\cell\f0 1\f1\cell\b\f0 (A AND B)\b0\f1\cell\row 
+\pard\nowidctlpar\par
+\f0 To produce the proof:\f1\par
+\f3\fs20\par
+A XOR B  =  1 - (A AND B)\tab\tab\tab\tab AND (A OR B)\tab\tab\tab      \tab      = (1 - A OR 1 - B)\tab  \tab\tab\tab AND (A OR B)\par
+\tab      = ([A OR 1 - B] AND [1 - A OR 1 \f11\endash\f10  \f3 B])\tab AND ([A OR B] AND [1 - AOR B])\par
+\tab      = ([A AND 1 - B] OR 1 - B)\tab       \tab AND ([A AND 1 - B] OR B)\par
+\f1\fs24\par
+\f0 Therefore\f1\par
+\par
+\b\f3\fs20 A XOR B  = (A AND [1 - B])\tab   \tab       \tab\tab OR   ((1 - A) AND B)\fs24\par
+\b0\f1\par
+\f0 Using the above, we can deduce the mathematical formula for :\f1\par
+\par
+\b\f3\fs20 IF, THEN, ELSE\fs24\par
+\par
+\fs20 IF x1 is A1k THEN y1 is Bk ELSE z1 is Ck for k=1, 2, ...\fs24\par
+\b0\f1\par
+\f0 Where A1k is an analogue input and Bk and Ck are outputs. \f1\par
+\par
+\f0 For r disjunctive analogue IF-THEN rules, the analogue output will be:\f1\par
+\par
+\b\f3\fs20 uBk(y) = XOR [\f9\lang1032\'ecA1k, \'ecA2k, \f10\'85\f9 ] for k = 1, 2 ,\f10\'85\f9 , r\f3\lang1023\par
+uBk(y) = [1 - \f9\lang1032\'ecA1k AND \'ecA2k] OR [1 - \f10\'85 \f9 AND \f10\'85\f9 ] for k = 1, 2, \f10\'85\f9 , r \f3\lang1023\par
+\f9\lang1032\'ecBk(y) = min [max [1 \f10\endash  \f9\'ecA1k (input 1), \'ecA2k (input 2)], max [1 - \f10\'85\f9 , \f10\'85\f9 ]] for k = 1, 2, \f10\'85\f9 , r\f3\lang1023\par
+\b0\f1\fs24\par
+\f0 Isn't that just great :)\f1\par
+\par
+\f0 [yeah, ok, enough \endash  lets go build an analogue computer from serge!!!]\f1\par
+\par
+\par
+\b\f3 . . . . . . . . . . . . . . . . . . . . . . . . . .\b0\f1\par
+
+\pard\sa200\sl276\slmult1\f12\fs22\lang9\par
+}
+ 

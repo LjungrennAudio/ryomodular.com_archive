@@ -1,0 +1,31 @@
+RYO Discrete TRL Boolean Logics
+NAND/AND
+ 
+1. Gate one input 1 (normalled 1>2)
+
+2. Gate one input 2 (normalled 2>3)
+
+3. Gate one input 3
+
+4. Gate one NAND Output
+
+5. Gate one AND Output (normalled to Gate two input 1)
+
+6. Gate two input 1 (inputs normalled 1>2)
+
+7. Gate two input 2
+
+8. Gate two NAND output
+
+9. Gate two AND output
+
+[Try dif input amplitudes, waveforms and frequency rates including audio into inputs!]
+
+Width: 4 hp
+
+
+
+
+
+
+

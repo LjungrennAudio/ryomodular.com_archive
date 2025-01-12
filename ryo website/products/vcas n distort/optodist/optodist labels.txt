@@ -1,0 +1,31 @@
+Optodist Features:
+
+1. 
+Manual gain control [sets either the amount of amplification/attenuation of signal, the vca initial open level and/or the amount of overdrive gain].
+
+2.
+Gain LEDindicates amount of gain or vca initial amount. 
+
+3.
+the signal in knob dictates the audio input level.
+4.
+Gain cv knob is an attenuator for the gain control cv input.
+
+5.
+An LED based limiter circuit which limits the signal thru a set of 4 LEDs.
+
+6.
+control voltage input (with attenuator - gain cv). either opens VCA or increases amount of distortion.
+
+7.
+Limiter on/off switch - engaging the LED clipping circuit will alter the character of the distortion.
+
+8.
+audio input. 
+
+9.
+audio output.
+
+Width: 6hp
+
+

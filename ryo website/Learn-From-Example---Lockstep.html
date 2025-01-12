@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="RYO eurorack synthesizer module design process behind scenes guide detailed look how process what involved  decision making why choices reasoning ">
+    <meta name="description" content="A very detailed and informative look at the actual process involved in designing a eurorack synthesiser module from absolute blank slate to finished circuit sdesign and other parts tooo, considering every detail and containing the full breakdown of the thought processes involved that help decision making,  the whys and werefores behind the choices and the reasonging involved in the making of such things">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Learn From Example - Lockstep</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="Learn-From-Example---Lockstep.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.9.5, nicepage.com">
+    <link rel="icon" href="images/favicon.svg">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "RYO Modular",
+		"logo": "images/RYOlogo-5.svg",
+		"sameAs": [
+				"https://www.facebook.com/RYO-Roll-Your-Own-by-Ljunggren-Audio-784195481597165/",
+				"https://twitter.com/modularryo",
+				"https://www.instagram.com/ryosynthesizers/?hl=en-gb",
+				"https://www.facebook.com/RYO-Roll-Your-Own-by-Ljunggren-Audio-784195481597165/",
+				"https://twitter.com/modularryo",
+				"https://www.instagram.com/ryosynthesizers/?hl=en-gb"
+		]
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Learn From Example - Lockstep">
+    <meta name="twitter:description" content="RYO Modular">
+    <meta property="og:title" content="Learn From Example - Lockstep">
+    <meta property="og:description" content="A very detailed and informative look at the actual process involved in designing a eurorack synthesiser module from absolute blank slate to finished circuit sdesign and other parts tooo, considering every detail and containing the full breakdown of the thought processes involved that help decision making,  the whys and werefores behind the choices and the reasonging involved in the making of such things">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body u-xl-mode"><header class=" u-clearfix u-header u-section-row-container" id="sec-7c15"><div class="u-section-rows" style="">
+        <div class="u-gradient u-section-row u-section-row-1" id="sec-71fa">
+          <div class="u-clearfix u-sheet u-sheet-1">
+            <a href="index.html" data-page-id="314912946" class="u-hover-feature u-image u-image-round u-logo u-image-1" data-image-width="356" data-image-height="164" title="index">
+              <img src="images/RYOlogo-5.svg" class="u-logo-image u-logo-image-1" data-image-width="80">
+            </a>
+            <form action="#" method="get" class="u-border-2 u-border-custom-color-1 u-search u-search-right u-white u-search-1">
+              <button class="u-search-button" type="submit">
+                <span class="u-grey-50 u-icon-rounded u-search-icon u-spacing-10 u-search-icon-1">
+                  <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 56.966 56.966" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-aa5a"></use></svg>
+                  <svg class="u-svg-content" viewBox="0 0 56.966 56.966" x="0px" y="0px" id="svg-aa5a" style="enable-background:new 0 0 56.966 56.966;"><path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23
+	s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
+	c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17
+	s-17-7.626-17-17S14.61,6,23.984,6z"></path></svg>
+                </span>
+              </button>
+              <input class="u-custom-font u-font-courier-new u-search-input u-text-palette-1-dark-1 u-search-input-1" type="search" name="search" value="" placeholder="Search">
+            </form>
+            <div class="u-social-icons u-spacing-16 u-social-icons-1" data-animation-name="" data-animation-duration="0" data-animation-direction="">
+              <a class="u-social-url" title="facebook" target="_blank" href="https://www.facebook.com/RYO-Roll-Your-Own-by-Ljunggren-Audio-784195481597165/"><span class="u-icon u-social-facebook u-social-icon u-text-grey-50"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1589"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-1589"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
+            c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
+              </a>
+              <a class="u-social-url" title="twitter" target="_blank" href="https://twitter.com/modularryo"><span class="u-icon u-social-icon u-social-twitter u-text-grey-50"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-08fa"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-08fa"><circle fill="currentColor" class="st0" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M83.8,47.3c0,0.6,0,1.2,0,1.7c0,17.7-13.5,38.2-38.2,38.2C38,87.2,31,85,25,81.2c1,0.1,2.1,0.2,3.2,0.2
+            c6.3,0,12.1-2.1,16.7-5.7c-5.9-0.1-10.8-4-12.5-9.3c0.8,0.2,1.7,0.2,2.5,0.2c1.2,0,2.4-0.2,3.5-0.5c-6.1-1.2-10.8-6.7-10.8-13.1
+            c0-0.1,0-0.1,0-0.2c1.8,1,3.9,1.6,6.1,1.7c-3.6-2.4-6-6.5-6-11.2c0-2.5,0.7-4.8,1.8-6.7c6.6,8.1,16.5,13.5,27.6,14
+            c-0.2-1-0.3-2-0.3-3.1c0-7.4,6-13.4,13.4-13.4c3.9,0,7.3,1.6,9.8,4.2c3.1-0.6,5.9-1.7,8.5-3.3c-1,3.1-3.1,5.8-5.9,7.4
+            c2.7-0.3,5.3-1,7.7-2.1C88.7,43,86.4,45.4,83.8,47.3z"></path></svg></span>
+              </a>
+              <a class="u-social-url" title="instagram" target="_blank" href="https://www.instagram.com/ryosynthesizers/?hl=en-gb"><span class="u-icon u-social-icon u-social-instagram u-text-grey-50"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-24ff"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-24ff"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2
+            z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.6,10.3,10.3C66.2,61.8,61.6,66.4,55.9,66.4z"></path><path fill="#FFFFFF" d="M74.3,33.5c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2S76.6,33.5,74.3,33.5z"></path><path fill="#FFFFFF" d="M73.1,21.3H38.6c-9.7,0-17.5,7.9-17.5,17.5v34.5c0,9.7,7.9,17.6,17.5,17.6h34.5c9.7,0,17.5-7.9,17.5-17.5V38.8
+            C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5
+            c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
+              </a>
+            </div>
+            <h6 class="u-custom-font u-font-courier-new u-text u-text-default u-text-1">DIY and Pre-Assembled Eurorack Products</h6>
+          </div>
+          
+          
+          
+          
+          
+        </div>
+        <div class="u-gradient u-section-row u-section-row-2" id="sec-13b1">
+          <div class="u-clearfix u-sheet u-sheet-2">
+            <img class="u-hover-feature u-image u-image-default u-image-2" src="images/synthcube-291x196.png" alt="" data-image-width="291" data-image-height="196" data-href="https://synthcube.com/cart/makers/ryo-ljunggren-audio" data-target="_blank">
+            <img class="u-hover-feature u-image u-image-default u-image-3" src="images/modgrid_light.svg" alt="" data-image-width="910" data-image-height="111" data-href="https://www.modulargrid.net/e/modules/browser?SearchName=&amp;SearchVendor=214" data-target="_blank">
+            <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="MD" data-position="School">
+              <div class="menu-collapse u-custom-font u-font-courier-new" style="font-size: 1rem; letter-spacing: 0px; font-weight: 500;">
+                <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-border-radius u-custom-borders u-custom-color u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link" href="#">
+                  <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+                  <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+                </a>
+              </div>
+              <div class="u-custom-menu u-nav-container">
+                <ul class="u-custom-font u-font-courier-new u-nav u-spacing-2 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-custom-color-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-grey-50 u-hover-custom-color-3 u-nav-link u-radius-6 u-text-active-grey-90 u-text-hover-custom-color-1" href="index.html" style="padding: 6px;">home</a>
+</li><li class="u-nav-item"><a class="u-active-custom-color-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-grey-50 u-hover-custom-color-3 u-nav-link u-radius-6 u-text-active-grey-90 u-text-hover-custom-color-1" href="AboutContact.html" style="padding: 6px;">About/Contact</a>
+</li><li class="u-nav-item"><a class="u-active-custom-color-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-grey-50 u-hover-custom-color-3 u-nav-link u-radius-6 u-text-active-grey-90 u-text-hover-custom-color-1" href="index.html" style="padding: 6px;">Products</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2"><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="OPTODIST.html">OPTODIST</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="2xVCX.html">2xVCX</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="3xVCA.html">3xVCA</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="Ampmix.html">AMPMIX</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="PENTA.html">PENTA</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="VC-SEQUENCER.html">VC SEQ</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="VC-SEQ-TrIG-XPANDER.html">TRIG XPANDER</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="ALTERED-STATES.html">ALTERED STATES</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="APERTURE.html">APERTURE</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="(N)AND.html">(N)AND</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="(N)OR.html">(N)OR</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="X(N)OR.html">X(N)OR</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="PATHS.html">PATHS</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="Airtenuator.html">AIRTENUATOR</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="Future-Teasers.html">Future Teasers</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-3"><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="Archive.html#sec-9b85" data-page-id="2958810823">Total Stimme</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="Discontinued.html">Discontinued</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-active-custom-color-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-grey-50 u-hover-custom-color-3 u-nav-link u-radius-6 u-text-active-grey-90 u-text-hover-custom-color-1" style="padding: 6px;">Learn</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-4"><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="School.html">School</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="Resources.html">Resources</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="Learn-From-Example---Lockstep.html">Learn From Example - Lockstep</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="Beginner-DIY-Tools.html">Beginner DIY Tools</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-active-custom-color-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-grey-50 u-hover-custom-color-3 u-nav-link u-radius-6 u-text-active-grey-90 u-text-hover-custom-color-1" href="some-useful-basics.html" style="padding: 6px;">some useful basics</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-5"><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="Getting-Started.html">Getting Started</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="wish-someone-told-me.html">wish someone told me</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="budgeting.html">budgeting</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="Control-Options.html">Control Options</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="other.html">Moar?</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="halp.html">halp</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-active-custom-color-2 u-border-active-palette-1-base u-border-hover-palette-1-base u-button-style u-grey-50 u-hover-custom-color-3 u-nav-link u-radius-6 u-text-active-grey-90 u-text-hover-custom-color-1" style="padding: 6px;">Other</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-6"><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="Specsheet.html">Specsheet</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="Quick-Access-downloads.html">Quick Access downloads</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="products.html">In Use</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white">Archives</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-7"><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="Archive.html#sec-3482" data-page-id="2958810823">Artworks</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="Archive.html#sec-3482" data-page-id="2958810823">Optodist development</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="Archive.html#sec-0c86" data-page-id="2958810823">Old News</a>
+</li><li class="u-nav-item"><a class="u-button-style u-custom-color-1 u-hover-custom-color-3 u-nav-link u-text-active-black u-text-hover-white" href="Archive.html#sec-a1bd" data-page-id="2958810823">Old FB Photos</a>
+</li></ul>
+</div>
+</li></ul>
+</div>
+</li></ul>
+              </div>
+              <div class="u-custom-menu u-nav-container-collapse">
+                <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+                  <div class="u-inner-container-layout u-sidenav-overflow">
+                    <div class="u-menu-close"></div>
+                    <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-8"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="index.html" style="padding: 6px;">home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="AboutContact.html" style="padding: 6px;">About/Contact</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="index.html" style="padding: 6px;">Products</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-9"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="OPTODIST.html">OPTODIST</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="2xVCX.html">2xVCX</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="3xVCA.html">3xVCA</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Ampmix.html">AMPMIX</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="PENTA.html">PENTA</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="VC-SEQUENCER.html">VC SEQ</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="VC-SEQ-TrIG-XPANDER.html">TRIG XPANDER</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="ALTERED-STATES.html">ALTERED STATES</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="APERTURE.html">APERTURE</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="(N)AND.html">(N)AND</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="(N)OR.html">(N)OR</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="X(N)OR.html">X(N)OR</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="PATHS.html">PATHS</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Airtenuator.html">AIRTENUATOR</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Future-Teasers.html">Future Teasers</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-10"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Archive.html#sec-9b85" data-page-id="2958810823">Total Stimme</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Discontinued.html">Discontinued</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 6px;">Learn</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-11"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="School.html">School</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Resources.html">Resources</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Learn-From-Example---Lockstep.html">Learn From Example - Lockstep</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Beginner-DIY-Tools.html">Beginner DIY Tools</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="some-useful-basics.html" style="padding: 6px;">some useful basics</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-12"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Getting-Started.html">Getting Started</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="wish-someone-told-me.html">wish someone told me</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="budgeting.html">budgeting</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Control-Options.html">Control Options</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="other.html">Moar?</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="halp.html">halp</a>
+</li></ul>
+</div>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 6px;">Other</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-13"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Specsheet.html">Specsheet</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Quick-Access-downloads.html">Quick Access downloads</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="products.html">In Use</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link">Archives</a><div class="u-nav-popup"><ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-14"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Archive.html#sec-3482" data-page-id="2958810823">Artworks</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Archive.html#sec-3482" data-page-id="2958810823">Optodist development</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Archive.html#sec-0c86" data-page-id="2958810823">Old News</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Archive.html#sec-a1bd" data-page-id="2958810823">Old FB Photos</a>
+</li></ul>
+</div>
+</li></ul>
+</div>
+</li></ul>
+                  </div>
+                </div>
+                <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+              </div>
+            </nav>
+            <p class="u-text u-text-default u-text-palette-5-dark-1 u-text-2">Purchase Here</p>
+            <p class="u-text u-text-default u-text-palette-5-dark-1 u-text-3">A Database And Planner:</p>
+          </div>
+          
+          
+          
+          
+          
+        </div>
+      </div></header>
+    <section class="u-clearfix u-image u-image-tiles u-shading u-section-1" id="sec-77b3" data-image-width="1703" data-image-height="1400">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://nicepage.com/k/teacher-website-templates" class="u-border-2 u-border-active-custom-color-1 u-border-black u-border-hover-custom-color-3 u-btn u-btn-round u-button-style u-custom-color-2 u-hover-black u-radius-12 u-text-black u-text-hover-white u-btn-1">Read More&nbsp;<span class="u-icon u-text-custom-color-4 u-icon-1"><svg class="u-svg-content" viewBox="0 0 412.72 412.72" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M404.72,82.944c-0.027,0-0.054,0-0.08,0h0h-27.12v-9.28c0.146-3.673-2.23-6.974-5.76-8    c-18.828-4.934-38.216-7.408-57.68-7.36c-32,0-75.6,7.2-107.84,40c-32-33.12-75.92-40-107.84-40    c-19.464-0.048-38.852,2.426-57.68,7.36c-3.53,1.026-5.906,4.327-5.76,8v9.2H8c-4.418,0-8,3.582-8,8v255.52c0,4.418,3.582,8,8,8    c1.374-0.004,2.724-0.362,3.92-1.04c0.8-0.4,80.8-44.16,192.48-16h1.2h0.72c0.638,0.077,1.282,0.077,1.92,0    c112-28.4,192,15.28,192.48,16c2.475,1.429,5.525,1.429,8,0c2.46-1.42,3.983-4.039,4-6.88V90.944    C412.72,86.526,409.139,82.944,404.72,82.944z M16,333.664V98.944h19.12v200.64c-0.05,4.418,3.491,8.04,7.909,8.09    c0.432,0.005,0.864-0.025,1.291-0.09c16.55-2.527,33.259-3.864,50-4c23.19-0.402,46.283,3.086,68.32,10.32    C112.875,307.886,62.397,314.688,16,333.664z M94.32,287.664c-14.551,0.033-29.085,0.968-43.52,2.8V79.984    c15.576-3.47,31.482-5.241,47.44-5.28c29.92,0,71.2,6.88,99.84,39.2l0.24,199.28C181.68,302.304,149.2,287.664,94.32,287.664z     M214.32,113.904c28.64-32,69.92-39.2,99.84-39.2c15.957,0.047,31.863,1.817,47.44,5.28v210.48    c-14.354-1.849-28.808-2.811-43.28-2.88c-54.56,0-87.12,14.64-104,25.52V113.904z M396.64,333.664    c-46.496-19.028-97.09-25.831-146.96-19.76c22.141-7.26,45.344-10.749,68.64-10.32c16.846,0.094,33.663,1.404,50.32,3.92    c4.368,0.663,8.447-2.341,9.11-6.709c0.065-0.427,0.095-0.859,0.09-1.291V98.944h19.12L396.64,333.664z"></path></svg><img></span>
+        </a>
+        <div class="u-border-2 u-border-white u-container-style u-custom-color-1 u-expanded-width u-group u-radius-12 u-shape-round u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <p class="u-align-center u-text u-text-1">This page is home to a project that is on long term hold but since it exists to educate at heart, and is completely open source, it might as well be displayed&nbsp; widely to help as many benefit from it as possible so here ya go - how to design a modue from scratch, in detail, everything you ever wanted to know about the process:<span style="font-weight: 700;"></span>
+            </p>
+          </div>
+        </div>
+        <div class="u-border-2 u-border-white u-container-style u-custom-color-2 u-expanded-width u-group u-opacity u-opacity-70 u-radius-12 u-shape-round u-group-2">
+          <div class="u-container-layout u-container-layout-2">
+            <p class="u-align-center u-text u-text-default u-text-2"> Following The Stages Of A New Module Development&nbsp;Process</p>
+            <p class="u-align-left u-text u-text-3">
+              <span style="font-weight: 700;">This is the first of a string of articles following the development of a new module in detail throughout the entire process. its an open source, diy learning/experience project to allow some who are planning a carreer in the industry get a taste of whats necessary and gain experience with no great risk of loss financially or as a reputation killer due to failiures etc. Hopefully it will bring to fruition a new, useful, desirable module that actually finds a place in peoples rigs and proves to teach those interested what they need to learn so they can move on to designi ng their own ideas and being independent.<br>
+                <br>
+                <span style="font-size: 1.25rem;">STEP 1: CONCEPTUALISATION</span>
+                <br>
+                <br>The absolute most utter start point is an idea. that moment of inspiration that hits at 4am in bed when you should be sleeping but instead are reading wikipedia on 1960’s british mixing desk circuitry… and suddenly ‘what if this sound were available in eurorack format?’ or ‘everytime i see this particular module mentioned someone has this issue – it needs a little 2hp expander to solve that’. this is something that either happens for you or it doesnt – you cant learn inspiration, you cant force ideas and you cant take a pill that engnders creativity – but if you have those ideas and can bring them to fruition then every other part of this process can be learned, practised, bought or undertaken by someone in a team. in the case of the module were are gonna follow the development, the initial idea brewed from realising how many people srtruggle with problems arising from poor clock/trigger/gate outputs/inputs from eurorack modules – there’s a need for a utility that would act as a general purpose toolbox for fixing all the issues frequently encountered in one nice compact simple module. thus the raw idea of ‘Lockstep’ is born.<br>
+                <br>the first step to take is some very crucial research:<br>– Does the module already exist?<br>– If so, has any functionality been missed that means its still realistic to make the idea?<br>– If there are exisiting equivalents, and no improvements can be made, can it be done cheaper or higher quality?<br>– If none of the above make sense, is there any point in carrying on down this thought path at all?<br>
+                <br>its important to keep in focus what the main aim is and what you want to get out of the process – if at anypoint you are deviating from these things and going off on a tangent due to getting hyperfocussed on solving some tiny issue or making some tiny profit or not enjoying the process then you should be gaining perspective or listening to others and realising youre going wrong. in the case of this module i quickly browsed throuhg the entire of the ModularGrid listings on utility/clock/trigger moduifier etc type modules and looked to see if they were overlapping this idea significantly and then considered that since it seeemed unique enough, that was plenty enough to justify using this as a learning process since it doesnt matter if its massively profitable or brings great success to a brand trying to attract attention etc. the next thing to do was a basic google search to get an idea of the scope of requirements the module would have – just a basic search using keywords covering the original issues inspiring it such as ‘clock, signal, weak, issues, spike, slewed, ground, etc.<br>
+                <br>This provided a significant set of results listing peoples forum and server and manufacturer requests for support on a number of module combinaions that suffered from relevant issues. having noted what the issues were and what fixes were suggested to solve them, it bwecame clear that the main issues were from either clocks/trigs being poorly shaped [having slewed rising edge, spikes on beginning or end, being weak, not returning to ground properly etc] or gates not syncing /being wrong length.<br>
+                <br>this suggested that there needed to be two main halves of the module – a conditioner that would take near any input signal, whether clock/gate/trig or even unexpected waveform shapes and non standard signals; and then convert them to perfect square edged trigs/clocks/gates of sufficint amplitude to make the destination module happy. the second half needed to be a path that would allow adding variable delay of a signal to sync it to something with latency issues along with something to alter length such that a gate source could be altered to satisfy needs of a destination module not getting the required gate to perform correctly.this set of info derived from the searches that suggested the above also gave suggestions of how to fix such issues – using a Doepfer A-160-2 (sync issues), amplifier like the A-183-3 (weak clock signal), an active buffer (ground issues) or a trigger modifier like the A-162 (slewed or otherwise invalid clock signal).<br>
+                <br>hence rather than having a bank of these kinda 4-6hp utilities it seemed there was a sensible avenue to make a single 6-10hp module that could do all this and preferably in a dual or multiple set up so modern sequencers and clock sources with multiple outs can be treated. This research also sparked the idea of collecting together as many known issues of certain module or module pairings into a database that would help potential users diagnose probnlems and so decide whether or not the ‘Lockstep’ module we were designing could help. this also makes a good selling point for the module – a good manual with a database in it is a great source of info for the user that puts it ahead of other modules and also attracts good attention toward the idea. this resulted in just these few problems from the intial quick gooogle search:<br>
+                <br>– sq1 slewed clocks<br>– es pulses have spikes<br>– marbles when supply voltage stabilizes slowly to its target voltage, something that depends on which PSU you use, where your module is located, and how other modules on the bus board behave,<br>– PNW seems to be one that doesn’t like to be slaved<br>– something with Rene?<br>– slaved Metropolis often needs a dedicated reset signal that is different from (earlier than) the reset bus all other slaved seqs get<br>– erogenous tones structure not good with clocks
+              </span>
+              <br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-image u-shading u-section-2" id="sec-0f5b" data-image-width="1703" data-image-height="1400">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-border-2 u-border-white u-container-style u-custom-color-2 u-expanded-width u-group u-opacity u-opacity-65 u-radius-12 u-shape-round u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <p class="u-text u-text-1">
+              <span style="font-weight: 700; font-size: 1.25rem;"> STEP 2: BASIC DESIGN CONSIDERATIONS;</span>
+              <br>
+              <br>
+              <span style="font-weight: 700;">from the initial research done during conceptualistation it became clear the emost likely requirements for the module would be:<br>
+                <br>– two channels of clock conditoning that would take near any signal and produce a nice square correct output according to doepfer standards of clocks/trigs/gates. i.e. two input jacks and two output jacks.<br>– two channels of trig/gate delay that would allow changing timing of signals for sync purposes and alter length of high state to shift signals from a trig right through to any desired gate.<br>
+                <br>using something that is required if youre going to design modules – i.e. electronic engineering we now have the bare minimum to set out the next stage of the process – circuit design. technically it would be cheapest and easiest to run up an smd based mdoule with an arduino ic doing microcontroller programmed processing – but the aim was to make an open source project people could learn from, DIY easily and do with little as possible knowledge/experience/skills.<br>
+                <br>Hence the clock conditioners i knew were simplest done in TH by usign a cd40106b cmos logic ic – its a hexinverter with schmedit trigger, although this means you could just build an opamp based kinda discrete custom schmidt trigger, two stages of 40106 [twice inverting to return to correct polarity] with the 40106 using a 5V supply will output a perfect square rising/falling edge clock/trig/gate, lengh dependent on input and some simple circuitry. whilst doing this initial circuit design i had a brief moment of further inspiration and thought ‘it’d be useful to have a choice of jumper selectable output voltages in case people needed a variety rather than just 5v. the final major part was to buffer the output to allow convenient multing with no voltage droop.<br>
+                <br>Likewise, trig./gate delay and gate length control can be done very simply by a basic 555 timer circuit that leads on to using an ne556 ic for each channel – dual 555 ic’s that therefore only need two ics to provide the whole logic necessities and then the same voltage selection and buffering circuits. to top off the initial circuitry would be needed the power [already designed from previous modules that had current overload fuses, reverse polarity diodes, and decoupling caps], all the relevant power decoupling for the opamp and logic ic’s and the tie offs to ground for any unused logic inputs [the 40106 ic has two spare in this instance].
+              </span>
+              <br>
+              <br>
+              <span style="font-weight: 700;">having penciled out these basic necessary requirements, progress may enter basic testing and prototyping with via CAD, simulation, breadbaording or even straight to pcb if you have access to cnc machinery. personally i like to draw out pencil sketched basic ideas into a clear readable cad drawn simulator package to help others discuss and learn from and try out extra ideas/easily, change as well as simulate just for certainty and troubleshooting in parallel with breadboarding – personally i believe in breadbaording pretty much everything so that real life conditions can be checked to avoid the inconsitstencies</span>
+              <span style="font-weight: 700;"> and weirdnesses of reality vs. simulation.</span>
+              <br>
+              <span style="font-weight: 700; font-style: italic;">the result was this:</span>
+              <br>
+            </p>
+          </div>
+        </div>
+        <img class="u-image u-image-contain u-image-1" src="images/clocky.png" data-image-width="1703" data-image-height="1400">
+        <div class="u-border-2 u-border-white u-container-style u-custom-color-2 u-group u-opacity u-opacity-90 u-radius-12 u-shape-round u-group-2">
+          <div class="u-container-layout u-container-layout-2">
+            <p class="u-align-center u-text u-text-2">note: the power shown in this particular schematic is not the most up to date pwoer configuration RYO uses - we now recommend 72V 0.25A PTC resettable fuses not 10r resistors and 1N5818 Schottky diodes reverse biased to ground to lessen voltage droop across the rails.<br>also, we use an extra pair of decoupling caps now and when running a 5V regulator the decoupling cap setup we use has changed too. current schematics in the info repository on this site are currently being updated and hopefully kits will reflect these changes in the near future.<br>
+              <br>[also the gnd connection to the power header is conspicuously missing on that particular power-intro circuit above!] D:
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-image u-image-tiles u-shading u-section-3" id="sec-5678" data-image-width="1703" data-image-height="1400">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-border-2 u-border-white u-container-style u-custom-color-2 u-group u-opacity u-opacity-70 u-radius-12 u-shape-round u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <p class="u-text u-text-1">
+              <span style="font-style: italic;"> Technically some of the stuff discussed so far was done a few years back as a proposed RYO module but abandoned as not suitable for a profit driven business. As a learning process though, it is ideal, so when a chance came to involve some people who could actually contribute useful input and would be enthusiatic and inspired by it as well as truly benefit it was a perfect moment to open the floor. as a result this caused the developemnt process to return to the more advanced parts of the basic design phase and good thing it did because there was still much to be done:</span>
+              <br>
+              <br>
+              <span style="font-weight: 700; font-size: 1.125rem;">PART 3: DETAILED DESIGN AND FINALISATION PRE-PROTOTYPING<br>
+              </span>
+              <br>
+              <span style="font-weight: 700;">having shown the current proposed idea schematics it was time to start discussing everything that could possibly be thought of prior to breadboarding – this wiould allow a full BOM to be made for ordering breadboard/prototyping parts and agree on any undecided issues that would require changes or experimentation.– how big should the modules be – therefore dictating whether minipots would be used [decision was minipots too frail and wobbly, as well as resulting in finger-cramping poor ergonomy].<br>
+                <br>– how many/where/what colour leds should be used to indicate any inputs, outputs, delay times, gate lengths etc [decided on input signal present led and output led that would show delay presence as well as gate length].<br>– should the module generate its own 5V supply or derive it from the busboard [decided to include internal 5v gen so those with no 5v bus presence wouldnt be inconvenienced]<br>– testing of delay and gate length ranges are good – what size timing caps would be best [decided also to consider a switchable cap choice so each delay/length channel could have range switches]<br>– are the 5v/10v suitable voltages for the output options [are they needed? if so what for?]<br>[Within the A-100 usually any voltage beyond about +3V is treated as “high” (e.g. +5V, +8V, +10V, +12V will work) and will trigger an ADSR or any other module with a Gate or Clock input (e.g. trigger delay, sequencer, clock divider, clock sequencer).] from 0 V to +8 V for ADSRs; Trigger, Gate or Clock Signals typical voltage levels of 0/+5 V.<br>– a database of known clock/gate/trig issues that are due to reset/clock/midi issues is def a good idea, i.e. note voltage/spikes/slew/gnd issues to help those who might think they need this module but it wont help,<br>can post soltuions given in forums to save people time – that’ll make us popular as a rource and goto info source on clocks etc – to go in the back of the manual perhaps?<br>– Who was gonna do the breadboarding/CAD translation to get the experience under their belt and therefore plan discussions of talk through the early schematics and familiarise others with the necessary info.<br>
+                <br>its also worth mentioning that some of this process is eased by prior experience of being part of a commercial/industry design team – i specifically design to use as small a number of component values as possible so that:<br>
+                <br>a) it’s less complex a build.<br>b) it’s less complex kit to pack, check and therefore avoid mistakes etc.<br>c) it costs less when bulk ordering components from factories in mass production [one change in a resistor value could change the bom cost by hundreds or even thousands on major scale].<br>d) tolerances of components have less overall effect because they tend to balance out when there’s lots at the same tolerance.<br>e) it’s easier for humans to build [finding the right component takes less time the less dif ones there are], and, it’s easier for production pnp machines – cheaper the less reels have to be changed or the less different ones you use.<br>f) shipping requires less packaging from component source and kit packaging needs - less bags etc.<br>g) there’s less colour codes etc for a beginner to learn.<br>h) speeds up and reduces risk of placing a wrong value component the simpler you keep things.<br>
+                <br>
+                <span style="font-style: italic;">[</span>
+                <span style="font-style: italic;">ok thats all the reasons i can think of for now but i’m sure there’s more</span>
+                <span style="font-style: italic;">]</span>
+                <br>
+                <br>as you can see, therefore there’s a good chance you may find some things can be easily built of existing parts you have – some r, c and d values/types are ridiculously common in all electronics – way more than most others, fundamentally though there’s always gonna be things you havent come across before or you dont have any of left because you only had one since they aint used much…<br>
+                <br>also certain components just plain cant be substituted – for example although this design makes it possible to change values of resistors in the output buffers to get the same amplification using a number of different combos, it’s not possible to substitute the 100uf electrolytic cap on the 5v power converter – that’s just straight out strictly required according to the datasheet, and if you aint got one then you buyin one! [most of the components in this thing cost like 0.1c each, it’s only pots and the power cable that are around the coupla $ mark]
+              </span>
+              <br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-image u-image-tiles u-shading u-section-4" id="sec-d1b4" data-image-width="1703" data-image-height="1400">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-align-left u-border-2 u-border-white u-container-style u-custom-color-2 u-group u-opacity u-opacity-55 u-radius-12 u-shape-round u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <p class="u-text u-text-1">
+              <span style="font-weight: 700;">
+                <span style="font-size: 1.25rem;">THE ​UNNAMED GROUP OF PEOPLE'S 'LOCKKSTEP' CLOCK CONDITIONING MODULE</span>&nbsp;<br>
+                <br>ideas [to be] discussed: <br>
+                <br>- check if this module exists - has something been missed? can we improve? can we make it as good even? etc. <br>[think were ok - checked mod grid once, need 2nd onion]<br>
+                <br>people use a Doepfer A-160-2, amplifier like the A-183-3 (weak clock signal), an active buffer (ground issues) or a trigger modifier like the A-162 (slewed or otherwise invalid clock signal), <br>
+                <br>- what modules have clock/trig issues? will it fix em? can it be made to fix em if not? <br>[search mod wiggler/google for modules and units with clock/gate/trig issues; <br>- go through mod grid identifying things using clocks or gates with same potential issues - look deep! <br>so far:sq1 slewed clocks, es pulses spikes, marbles when supply voltage stabilizes slowly to its target voltage,
+something that depends on which PSU you use, where your module is located, and how other modules on the bus board behave, <br>PNW seems to be one that doesn’t like to be slaved, something with Rene?, <br>slaved Metropolis often needs a dedicated reset signal that is different from (earlier than) the reset bus all other slaved seqs get].<br>
+                <br>- not mini pots <br>- leds on other ins n outs to show clock/trig signal present/length? <br>- what colour leds mean what? should dif colours display dif gate/trig length? <br>- will it goes as smol as 4-6hp [is this wise? too crammed? ...[def wont fit 4hp!] <br>- 5v internal generation ok? <br>- need to see if the delay and length times are a good range <br>- are the 5v/10v suitable voltages for the output options [are they needed?if so what for?] <br>[Within the A-100 usually any voltage beyond about +3V is treated as "high" (e.g. +5V, +8V, +10V, +12V will work) and will trigger an ADSR or any other module with a Gate or Clock input (e.g. trigger delay, sequencer, clock divider, clock sequencer).] <br>- from 0 V to +8 V for ADSRs; Trigger, Gate or Clock Signals typical voltage levels of 0/+5 V. <br>- a database of known clock/gate/trig issues that are due to reset/clock/midi issues, i.e. not voltage/spikes/slew/gnd issues to help those who might think they need this module but it wont help, <br>can post soltuions given in forums to save people time - that'll make us popular as a resource and goto info source on clocks etc - to go in the back of the manual perhaps?! <br>
+                <br>
+                <br>************* <br>
+                <span style="font-size: 1.125rem;">BOM for 'LOCKSTEP'</span>
+                <br>
+                <br>----------------------------------------------------------------------------------------------------- <br>
+                <span style="font-size: 1.125rem;">resistors:</span>
+                <br>- r	1,2,9,13,14,27,31,43,45		100k	8	all the same pretty much... <br>- r	4,5,6,7,9,11,12,16,17,18,19,21, <br>&nbsp; &nbsp; 22,24,25,26,30,37,41,42,54,56, <br>&nbsp; &nbsp; 57,59,60,62,64,66,67,69,70,72	47k	32	all the same pretty much... <br>- r	8,20,58,68			30k	4	all the same pretty much... <br>- r	51,52				10r	2	all the same pretty much... <br>- r	3,15,53,63			120k	4	all the same pretty much... <br>- r	10,23,61,71			330r	4	all the same pretty much... <br>- r	28,32,44,46			220k	4	all the same pretty much... <br>- r	29,36				2.2k	2	all the same pretty much... <br>
+                <br>
+                <span style="font-size: 1.125rem;">capacitors:</span>
+                <br>- c	9,10,17,18,19,20,23,24,25,26, <br>&nbsp; &nbsp; 31,32,33,34,35,36		100n	17	ceramic c0g 2.5mm or equiv <br>- c	1,2,27,28			22pf	4	ceramic c0g 2.5mm or equiv <br>- c	3,6,11,14			1n	4	ceramic c0g 2.5mm or equiv <br>- c	4,5,7,8,12,13,15,16		10n	8	ceramic c0g 2.5mm or equiv <br>- c	21,22				10uF	2	electrolytic, 25v, 2mm pin pitch, 5mm dia, 5mm height <br>
+                <br>
+                <span style="font-size: 1.125rem;">transistors:</span>
+                <br>- 1,2,3,4				BC457B	4	to-92 packacge <br>
+                <br>
+                <span style="font-size: 1.125rem;">diodes:</span>
+                <br>- d	1,2				amber?	2	LED, 3mm <br>- d	3,4				SB130	2	or 1N5818, schottky power <br>
+                <br>
+                <span style="font-size: 1.125rem;">integrated  circuits:</span>
+                <br>- ic	1				40106	1	cd4xxxb cmos logic hexinverter w/ schmitt trigger <br>- ic	2,3,6,7				TL074	4	opamp <br>- ic	4,5				NE556	2	dual timer <br>
+                <br>
+                <span style="font-size: 1.125rem;">Hardware:</span>
+                <br>- p	1,2,3,4				1M log	4	rotary pots <br>___ <br>- j&nbsp;8 x				jacks		3.5mm mono, un-switched - like PJ301BM or kobicon/clone [not too important for bb] <br>___ <br>
+                <span style="font-style: italic;">[for 5v supply if not taken off bench psu] <br>- vr	x				lm2391	1	5v fixed voltage regulator, to92 package <br>- c	x				100n	1	ceramic c0g 2.5mm or equiv <br>- c	x				100uF	1	electrolytic, 25v, 2mm pin pitch, 5mm dia, 5mm height
+                </span>
+                <br>
+                <br>*********** <br>
+                <span style="font-style: italic;">not needed for breadboarding - only for pcb </span>
+                <br>
+                <br>
+                <span style="font-size: 1.125rem;">connectors:</span>
+                <br>___ <br> - 1	x				10pin		10pin boxed power header <br>- cn	1,2,6,7				3pin	4	3pin jumper header <br>- cn	1,2,6,7				2pin	4	2 socket insulated jumper <br>- is	1,2,3,4,5,6,7			14pin	7	ic sockets, 14pin <br>___ <br>- cbl	x					1	10-16pin eurorack power cable <br>___ <br>- also will be needed:			knobs, screws, pcb, faceplate,&nbsp;
+              </span>
+              <br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-image u-image-tiles u-shading u-section-5" id="sec-a0f3" data-image-width="1703" data-image-height="1400">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-align-center u-border-2 u-border-white u-container-style u-custom-color-2 u-group u-opacity u-opacity-60 u-radius-12 u-shape-round u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <p class="u-text u-text-1">
+              <span style="font-weight: 700; font-size: 1.25rem;"> STEP 4: A NEAR FINISHED SCHEMATIC / PROTOTYPING CONT.</span>
+              <br>
+              <br>
+              <span style="font-weight: 700;">after some discussion here’s the current state of affairs ready to be breadboarded - this is where the project last stalled and still, therefore, awaits testing, pcb routing, further testing and finishing off:</span>
+            </p>
+          </div>
+        </div>
+        <img class="u-border-2 u-border-custom-color-2 u-image u-image-contain u-image-1" src="images/Lockstep.png" data-image-width="1024" data-image-height="841">
+        <div class="u-border-2 u-border-white u-container-style u-custom-color-2 u-group u-opacity u-opacity-80 u-radius-12 u-shape-round u-group-2">
+          <div class="u-container-layout u-container-layout-2">
+            <p class="u-text u-text-2">If this inspires or educates anyone in a ny useful way please feel free to do what you wish with all this and please do keep us in the loop - we'd love to hear of your successes and discoveries and any other cool experiences that may have resulted - go forth and have fun!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    <footer class="u-clearfix u-footer u-grey-70 u-footer" id="sec-d163"><a href="mailto:www.ryomodular@gmail.com?subject=website%20error" class="u-active-none u-border-active-palette-2-dark-1 u-border-hover-palette-2-base u-border-none u-border-palette-1-base u-btn u-button-style u-gradient u-hover-none u-none u-text-hover-palette-2-base u-text-palette-1-base u-btn-1">Report Error</a><div class="u-social-icons u-spacing-16 u-social-icons-1" data-animation-name="" data-animation-duration="0" data-animation-direction="">
+        <a class="u-social-url" title="facebook" target="_blank" href="https://www.facebook.com/RYO-Roll-Your-Own-by-Ljunggren-Audio-784195481597165/"><span class="u-icon u-social-facebook u-social-icon u-text-grey-50"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3fbf"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-3fbf"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2
+            c0-6.7,3.1-17,17-17h12.5v13.9H73.5z"></path></svg></span>
+        </a>
+        <a class="u-social-url" title="twitter" target="_blank" href="https://twitter.com/modularryo"><span class="u-icon u-social-icon u-social-twitter u-text-grey-50"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-576c"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-576c"><circle fill="currentColor" class="st0" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M83.8,47.3c0,0.6,0,1.2,0,1.7c0,17.7-13.5,38.2-38.2,38.2C38,87.2,31,85,25,81.2c1,0.1,2.1,0.2,3.2,0.2
+            c6.3,0,12.1-2.1,16.7-5.7c-5.9-0.1-10.8-4-12.5-9.3c0.8,0.2,1.7,0.2,2.5,0.2c1.2,0,2.4-0.2,3.5-0.5c-6.1-1.2-10.8-6.7-10.8-13.1
+            c0-0.1,0-0.1,0-0.2c1.8,1,3.9,1.6,6.1,1.7c-3.6-2.4-6-6.5-6-11.2c0-2.5,0.7-4.8,1.8-6.7c6.6,8.1,16.5,13.5,27.6,14
+            c-0.2-1-0.3-2-0.3-3.1c0-7.4,6-13.4,13.4-13.4c3.9,0,7.3,1.6,9.8,4.2c3.1-0.6,5.9-1.7,8.5-3.3c-1,3.1-3.1,5.8-5.9,7.4
+            c2.7-0.3,5.3-1,7.7-2.1C88.7,43,86.4,45.4,83.8,47.3z"></path></svg></span>
+        </a>
+        <a class="u-social-url" title="instagram" target="_blank" href="https://www.instagram.com/ryosynthesizers/?hl=en-gb"><span class="u-icon u-social-icon u-social-instagram u-text-grey-50"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-43e8"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-43e8"><circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle><path fill="#FFFFFF" d="M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2
+            z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.6,10.3,10.3C66.2,61.8,61.6,66.4,55.9,66.4z"></path><path fill="#FFFFFF" d="M74.3,33.5c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2S76.6,33.5,74.3,33.5z"></path><path fill="#FFFFFF" d="M73.1,21.3H38.6c-9.7,0-17.5,7.9-17.5,17.5v34.5c0,9.7,7.9,17.6,17.5,17.6h34.5c9.7,0,17.5-7.9,17.5-17.5V38.8
+            C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5
+            c5.5,0,9.9,4.5,9.9,9.9V73.3z"></path></svg></span>
+        </a>
+      </div><p class="u-text u-text-default u-text-1"> © 2022 LjunggrenAudio RYO</p></footer><span style="height: 64px; width: 64px; margin-left: 0px; margin-right: auto; margin-top: 0px; background-image: linear-gradient(#cbe0ec, rgba(119,185,217,0.95)); right: 20px; bottom: 20px; color: rgb(71, 138, 201) !important;" class="u-back-to-top u-gradient u-icon u-icon-rounded u-opacity u-opacity-85 u-spacing-10" data-href="#">
+        <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 551.13 551.13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1d98"></use></svg>
+        <svg class="u-svg-content" enable-background="new 0 0 551.13 551.13" viewBox="0 0 551.13 551.13" xmlns="http://www.w3.org/2000/svg" id="svg-1d98" data-color="rgb(71, 138, 201)"><path d="m275.565 189.451 223.897 223.897h51.668l-275.565-275.565-275.565 275.565h51.668z"></path></svg>
+    </span>
+  </body>
+</html>

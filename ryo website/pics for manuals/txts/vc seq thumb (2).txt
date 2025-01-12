@@ -1,0 +1,29 @@
+RYO VC Sequencer
+
+1. Step 1 CV Output Lvl Knob (-5V to +5V).
+
+2. Step 2 CV Output Lvl Knob (-5V to +5V).
+
+3. Step 3 CV Output Lvl Knob (-5V to +5V).
+
+4. Step 4 CV Output Lvl Knob (-5V to +5V).
+
+5. Step 5 CV Output Lvl Knob (-5V to +5V).
+
+6. Step 6 CV Output Lvl Knob (-5V to +5V).
+
+7. Step 7 CV Output Lvl Knob (-5V to +5V).
+
+8. Step 8 CV Output Lvl Knob (-5V to +5V).
+
+9. CV/Clock input (advances one step per pulse/+0.625V window crossed).
+
+10. Reset input.
+
+11. Output (stepped CV 10Vpp)
+
+12. Mode switch (Voltage Controlled Mode/Reverse Clocked Mode/Forward Clocked Mode)
+
+(Clocked Modes and CV Mode sync above audio rates extending funtionality into a 3bit waveshaper.)
+
+Width: 10hp

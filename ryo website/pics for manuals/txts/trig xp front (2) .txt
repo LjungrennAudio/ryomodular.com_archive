@@ -1,0 +1,21 @@
+Trig Xpander (for RYO VC Sequencer)
+ 
+1. Step 1 individual output.
+
+2. Step 2 individual output.
+
+3. Step 3 individual output.
+
+4. Step 4 individual output.
+
+5. Step 5 individual output.
+
+6. Step 6 individual output.
+
+7. Step 7 individual output.
+
+8. Step 8 individual output.
+
+9. Common output (gives a trig/gate for each step progression.)
+ 
+Width: 4hp

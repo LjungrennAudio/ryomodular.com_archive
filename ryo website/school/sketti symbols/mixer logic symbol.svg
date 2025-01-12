@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="282.009" height="158" viewBox="0, 0, 282.009, 158">
+  <g id="Layer_1">
+    <path d="M122,74.5 C102.946,74.5 87.5,59.054 87.5,40 C87.5,20.946 102.946,5.5 122,5.5 C141.054,5.5 156.5,20.946 156.5,40 C156.5,59.054 141.054,74.5 122,74.5 z" fill-opacity="0" stroke="#000000" stroke-width="3"/>
+    <g>
+      <path d="M73.9,40 L12.5,40" fill-opacity="0" stroke="#000000" stroke-width="3"/>
+      <path d="M73.9,44.2 L85.1,40 L73.9,35.8 z" fill="#000000" fill-opacity="1" stroke="#000000" stroke-width="3" stroke-opacity="1"/>
+    </g>
+    <g>
+      <path d="M122,88.1 L122,146.5" fill-opacity="0" stroke="#000000" stroke-width="3"/>
+      <path d="M126.2,88.1 L122,76.9 L117.8,88.1 z" fill="#000000" fill-opacity="1" stroke="#000000" stroke-width="3" stroke-opacity="1"/>
+    </g>
+    <g>
+      <path d="M217.9,40 L156.5,40" fill-opacity="0" stroke="#000000" stroke-width="3"/>
+      <path d="M217.9,44.2 L229.1,40 L217.9,35.8 z" fill="#000000" fill-opacity="1" stroke="#000000" stroke-width="3" stroke-opacity="1"/>
+    </g>
+    <path d="M98.697,15.529 L147.197,64.029" fill-opacity="0" stroke="#000000" stroke-width="3"/>
+    <path d="M147.197,15.529 L98.697,64.029" fill-opacity="0" stroke="#030303" stroke-width="3"/>
+    <text transform="matrix(1, 0, 0, 1, 9.952, 26.029)">
+      <tspan x="-6.254" y="6" font-family="ArialMT" font-size="19" fill="#2715FD">f</tspan>
+      <tspan x="-0.976" y="6" font-family="ArialMT" font-size="13" fill="#2715FD">1</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 104.746, 143)">
+      <tspan x="-6.254" y="6" font-family="ArialMT" font-size="19" fill="#2715FD">f</tspan>
+      <tspan x="-0.976" y="6" font-family="ArialMT" font-size="13" fill="#2715FD">2</tspan>
+    </text>
+    <text transform="matrix(1, 0, 0, 1, 253.254, 42)">
+      <tspan x="-23.335" y="-12.5" font-family="ArialMT" font-size="19" fill="#2715FD">f</tspan>
+      <tspan x="-18.057" y="-12.5" font-family="ArialMT" font-size="13" fill="#2715FD">1</tspan>
+      <tspan x="-10.827" y="-12.5" font-family="ArialMT" font-size="19" fill="#2715FD"> + f</tspan>
+      <tspan x="16.105" y="-12.5" font-family="ArialMT" font-size="13" fill="#2715FD">2</tspan>
+      <tspan x="-20.951" y="24.5" font-family="ArialMT" font-size="19" fill="#2715FD">f</tspan>
+      <tspan x="-15.672" y="24.5" font-family="ArialMT" font-size="13" fill="#2715FD">1</tspan>
+      <tspan x="-8.442" y="24.5" font-family="ArialMT" font-size="19" fill="#2715FD"> - f</tspan>
+      <tspan x="13.721" y="24.5" font-family="ArialMT" font-size="13" fill="#2715FD">2</tspan>
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,26 @@
+Aperture
+
+Switching:
+
+* Non resonant lowpass filter
+* Resonant lowpass filter
+* Both: Non resonant lowpass gate
+* Both: Resonant lowpass gate
+* VCA
+* 6dB variety of resonant lowpass gate in the VCA mode with resonance on.
+ 
+The resonance to wild and untamed howling towards the end of the pots range. 
+
+The self-oscillation also lends itself well to creating kickdrums, toms and other percussive sounds. 
+ 
+The Klang input generates a decay slope from a trigger, the shape is very steep in the beginning and quickly smooths out to a nice prolonged ring -  accepts variety of trigger voltages and lengths and other control voltages
+
+CV input will also accept triggers
+
+the input is AC coupled 
+
+a dedicated attenuator with clipping overdrive towards the end of the pot range
+
+The signal input is scaled for 10Vpp audio signals. [The AC coupling comes after the overdrive circuit so you can add offsets to your audioto get an asymmetric clipping].
+ 
+Width: 8 hp

@@ -1,0 +1,31 @@
+RYO Aperture
+
+1. Cutoff/Gain lvl indicator.
+
+2. Cutoff Frequency/VCA Inital Knob.
+
+3. Three position mode switch [when res off]:
+   - LPF: Non resonant lowpass filter.
+   - Both: Non resonant lowpass gate.
+   - VCA: Standard Expo VCA.
+
+4. CV attenuator for Cutoff Freq/VCA CV
+
+5. Resonance Manual Lvl Knob.
+
+6. Resonance on/off switch [when res on, mode switch gives]:
+   - LPF: Resonant lowpass filter.
+   - Both: Resonant lowpass gate.
+   - VCA: 6dB variety of resonant lowpass gate.
+
+7. Input Signal Lvl - will overdrive in range marked.
+
+8. Klang Input (feed it a trig or other control voltage!).
+
+9. Cutoff Freq/VCA CV input.
+
+10. Signal Input.
+
+11. Signal Output.
+
+Width: 8 hp

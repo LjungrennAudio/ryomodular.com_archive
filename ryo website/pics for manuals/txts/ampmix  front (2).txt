@@ -1,0 +1,34 @@
+RYO Ampmix
+
+1. high impedance input (offset normaled to channel, gives upto +5V @knob full cw).
+
+2. buffered output
+
+3. Gain knob (past 50% amplifies up to 2.0x gain (6dB) max)
+
+4. high impedance input
+
+5.  Gain knob (past 50% amplifies up to 2.0x gain (6dB) max)
+
+6. buffered output
+
+7. high impedance input
+
+8.  Gain knob (past 50% amplifies up to 2.0x gain (6dB) max)
+
+9. buffered output
+
+10. high impedance input
+
+11.  Gain knob (past 50% amplifies up to 2.0x gain (6dB) max)
+
+12. buffered output/mix out
+
+Can be configured as
+4 channel mixer,
+1 attenuator + 3 channel mixer,
+2 attenuators + 2 channel mixer or,
+4 attenuators.
+
+
+Width: 8hp

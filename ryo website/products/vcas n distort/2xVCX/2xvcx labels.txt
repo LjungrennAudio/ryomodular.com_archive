@@ -1,0 +1,53 @@
+Kymatica Devices 2xVCX
+
+1.
+Ch 1 control voltage offset knob - acts as vca initial, offset for the four quadrant multiplier or bias for the crossfader.
+
+2.
+Ch 2 control voltage offset knob - acts as vca initial, offset for the four quadrant multiplier or bias for the crossfader.
+
+3.
+Ch1 Mode switch:
+
+- Switch position A > A; this mode input A and the CV input acts as a Four Quadrand Multiplier. It will do ringmodulation and voltage controlled polarization (bipolar VCA).
+- Switch position 0 > A; In this mode input A and the CV input will act as a normal linear VCA.
+- Switch position B > A; In this mode the CV input will control a crossfade from input B to input A.
+
+4.
+Ch 2 mode switch:
+See 3.
+
+5.
+ch1. Control voltage attenuator.
+
+6.
+Ch 2 control voltage attenuator.
+
+7. 
+Ch 1 control voltage input.
+
+8.
+Ch 2 Output
+
+9.
+Ch 2 control voltage input
+
+10.
+Ch 1 A input, Dc coupled, Works for cv and audio.
+
+11.
+Mix output - normalized to ch 2 B input. 
+
+12.
+Ch 2 A input, Dc coupled, Works for cv and audio.
+
+13.
+Ch 1 B input,  Dc coupled, Works for cv and audio.
+
+14.
+Ch 1 output
+
+15.
+Ch 2 B input
+
+Width: 8 hp

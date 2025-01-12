@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="755" height="500" viewBox="0, 0, 755, 500">
+  <g id="Layer_1">
+    <g>
+      <text transform="matrix(1, 0, 0, 1, 91.705, 132.387)">
+        <tspan x="-42.678" y="11" font-family="Avenir-Medium" font-size="36" fill="#656565">Input</tspan>
+      </text>
+      <text transform="matrix(1, -0.003, 0.003, 1, 678.705, 223.387)">
+        <tspan x="-39.996" y="11" font-family="Avenir-Medium" font-size="36" fill="#656565">Time</tspan>
+      </text>
+      <text transform="matrix(1, 0, 0, 1, 122.837, 351.387)">
+        <tspan x="-59.31" y="11" font-family="Avenir-Medium" font-size="36" fill="#656565">Output</tspan>
+      </text>
+      <g>
+        <path d="M136.027,170.887 L207.027,170.887" fill-opacity="0" stroke="#43699F" stroke-width="3"/>
+        <path d="M207.027,170.887 L207.027,99.887" fill-opacity="0" stroke="#43699F" stroke-width="3"/>
+        <path d="M207.027,99.887 L424.027,99.887" fill-opacity="0" stroke="#43699F" stroke-width="3"/>
+        <path d="M424.027,99.887 L424.027,170.887" fill-opacity="0" stroke="#43699F" stroke-width="3"/>
+        <path d="M424.027,170.887 L593.027,170.887" fill-opacity="0" stroke="#43699F" stroke-width="3"/>
+        <path d="M136.027,388.887 L207.027,388.887" fill-opacity="0" stroke="#43699F" stroke-width="3"/>
+        <path d="M207.027,388.887 L424.027,293.887" fill-opacity="0" stroke="#43699F" stroke-width="3"/>
+        <path d="M424.027,293.887 L587.027,293.887" fill-opacity="0" stroke="#43699F" stroke-width="3"/>
+        <path d="M141.027,170.887 L69.027,170.887" fill-opacity="0" stroke="#43699F" stroke-width="3" stroke-dasharray="9,6"/>
+        <path d="M136.027,388.887 L64.027,388.887" fill-opacity="0" stroke="#43699F" stroke-width="3" stroke-dasharray="9,6"/>
+        <path d="M659.027,170.887 L587.027,170.887" fill-opacity="0" stroke="#43699F" stroke-width="3" stroke-dasharray="9,6"/>
+        <path d="M659.027,293.887 L587.027,293.887" fill-opacity="0" stroke="#43699F" stroke-width="3" stroke-dasharray="9,6"/>
+      </g>
+      <path d="M29,29 L29,472" fill-opacity="0" stroke="#656565" stroke-width="4"/>
+      <g>
+        <path d="M29,245 L715.4,245" fill-opacity="0" stroke="#656565" stroke-width="4"/>
+        <path d="M715.4,245 L712.2,249.8 L725,245 L712.2,240.2 z" fill="#656565" fill-opacity="1" stroke="#656565" stroke-width="4" stroke-opacity="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

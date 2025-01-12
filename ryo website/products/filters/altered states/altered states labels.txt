@@ -1,0 +1,30 @@
+Altered States
+
+12db/oct
+
+Controls:
+ 
+2, 4. Frequency cutoff control knob
+6, 9. Resonance amount control knob
+7, 8. Frequency cutoff CV attenuverter knob
+11, 12. Input level attenuator with overdrive knob
+10, 13.Variable state control minishaft type
+15, 17. Resonance amount CV attenuverter minishaft type
+ 
+Inputs/Outputs:
+ 
+22, 23. Filter audio input
+19, 26. Frequency cutoff CV input
+20, 25. Frequency cutoff 1V/O scaled input - around 5 octaves of 1V/O tracking sine wave @self-oscillation. the LP, BP and HP outputs each have a different phased sine.
+21, 24. Resonance amount CV input
+14, 18. Variable state CV input
+30, 31. Variable state output (LP-Notch-HP) The state outputs offer seamless fading between lowpass and highpass filter response, with an all-pass/notch response around 50% of the knob setting
+29, 32. Lowpass output
+B2, 33. 8andpass output
+27, 34. Highpass output
+ 
+3. toggle switches for Combine (links the filter B frequency cutoff controls to filter A), and
+16. serial or parallel input routing.
+
+Width: 20 hp
+

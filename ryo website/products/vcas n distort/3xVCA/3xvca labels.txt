@@ -1,0 +1,32 @@
+3xVCA Features:
+
+( mod to normal the VCAs in a cascading fashion allows both linear and exponential responses.)
+
+1.
+Control voltage input. Can be calibrated for either 5V or 8V CV.
+
+2.
+DC coupled signal input, linear response.
+
+3.
+Signal output. If modded then will be normalled to vca below.
+
+4.
+Control voltage input. Can be calibrated for either 5V or 8V CV.
+
+5.
+DC coupled signal input, linear response. 
+
+6.
+Signal output. If modded then normalled to vca below.
+
+7.
+Control voltage input. Can be calibrated for either 5V or 8V CV.
+
+8.
+DC coupled signal input, linear response. If modded then will be expo response when nothing is connected to above output.
+
+9.
+Signal output.
+
+Width: 4hp

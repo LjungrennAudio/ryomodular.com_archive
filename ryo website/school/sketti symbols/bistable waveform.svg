@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="770" height="590" viewBox="0, 0, 770, 590">
+  <g id="Layer_1">
+    <g>
+      <path d="M25,148.75 L171,148.75 L171,5.75 C171,5.75 174,149.75 233,148.75 L531,148.75 L531,292.75 C531,292.75 532,150.75 593,148.75 L746,148.75" fill-opacity="0" stroke="#43699F" stroke-width="3"/>
+      <path d="M25,366.75 L171,366.75 L171,585.25 L531,585.25 L531,366.75 L746,366.75" fill-opacity="0" stroke="#43699F" stroke-width="3"/>
+      <text transform="matrix(1, 0, 0, 1, 67.178, 120.75)">
+        <tspan x="-42.678" y="11" font-family="Avenir-Medium" font-size="36" fill="#656565">Input</tspan>
+      </text>
+      <text transform="matrix(1, 0, 0, 1, 83.81, 395.75)">
+        <tspan x="-59.31" y="11" font-family="Avenir-Medium" font-size="36" fill="#656565">Output</tspan>
+      </text>
+      <text transform="matrix(1, 0, 0, 1, 690.822, 395.75)">
+        <tspan x="-47.322" y="11" font-family="Avenir-Medium" font-size="36" fill="#656565">+Vsat</tspan>
+      </text>
+      <text transform="matrix(1, 0, 0, 1, 697.122, 559.75)">
+        <tspan x="-41.022" y="11" font-family="Avenir-Medium" font-size="36" fill="#656565">-Vsat</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

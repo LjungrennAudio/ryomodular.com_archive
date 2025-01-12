@@ -1,0 +1,16 @@
+Penta
+
+buffered output
+
+schmitt triggers on inputs
+
+Sending a clock to the CLK input will progress the sequence
+
+5 minishaft potentiometers for the 5 steps voltages,
+
+0 to +5V output.
+
+pattern length switch for selecting 3, 4 or 5 steps pattern length; [can also be set by using an external gate or trig into the RST (Reset) input.]
+
+Width: 4hp 
+

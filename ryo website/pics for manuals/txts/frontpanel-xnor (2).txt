@@ -1,0 +1,31 @@
+RYO Discrete TRL Boolean Logics
+XNOR/NOR/NOT
+ 
+1. Gate one input 1
+
+2. Gate one input 2
+
+3. Gate one XNOR output
+
+4. Gate one NOR Output (normalled to Gate two input 1)
+
+5. Gate two input 1 
+
+6. Gate two input 2
+
+7. Gate two XOR output (normalled to Gate three input 1)
+
+8. Gate three input 1
+
+9. Gate three NOT output
+
+[Try dif input amplitudes, waveforms and frequency rates including audio into inputs!]
+
+Width: 4 hp
+
+
+
+
+
+
+

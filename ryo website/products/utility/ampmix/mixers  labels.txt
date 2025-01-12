@@ -1,0 +1,16 @@
+Ampmix
+ 
+CV and audio mixer/processor
+precision
+high impedance input
+buffered output
+ 
+It works as a 4 channel mixer,
+1 attenuator + 3 channel mixer,
+2 attenuators + 2 channel mixer
+or 4 attenuators.
+With up to 2.0x gain (6dB) on each channel.
+ 
+An offset voltage is generated then normaled to the inputs of the 4 channels, giving them a maximum of 5V out each with knobs turned full clockwise (2.0x gain).
+
+Width: 8hp

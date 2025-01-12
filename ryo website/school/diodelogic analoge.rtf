@@ -1,0 +1,26 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Tahoma-Bold;\f1\fnil\fcharset0 Tahoma;}
+{\colortbl;\red255\green255\blue255;\red47\green47\blue47;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c24314\c24314\c24314;\cssrgb\c100000\c100000\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 ANDs ORs XORs and NOTs
+\f1\b0 \
+Although these are simple as basic digital concepts, and true analogue versions of these concepts will be discussed but let us discuss briefly the slightly odd cases of some forms of  NOT, AND and OR. When considering diode logic there are situations where it can be more than just digital 1 or 0, low or high but not a full true analogue:\
+\
+A diode NOT simply passes the signal through, inverted, but, since an inverted postitive will not pass through a reverse biased diode as far as logic is concerned, in diode logic only negatives can be inverted by a NOT gate, but those signals are full analogue.\
+\
+The diode AND gate is a min() function - it\'92s output is equal to the smallest value input, _not_ multiplication as with true analogue. So, for example, for signals of 1.2V, 6.7V and 4.3V, the output would be 1.2V. this does however allow negative values through and also is true analogue in a sense since it allows constant moving voltages of any value up to the limits of the electronics.\
+\
+Likewise the diode OR gate is a max() function not an addition like true analogue, so the output value from the same three signals would be 6.7V, again passing -ve values and continuous moving voltages in true analogue fashions possible.\
+\
+the above AND and OR for diode logic work as pure digital lgoic in a true sense unlike the NOT.\
+\
+Conversely, the diode XOR gate even more odd and seems to do something along the lines of a max() function on the analogue inputs, but also sharing properties of a digital gate. That is, to understand the complete behaviour you have to keep track of both analogue and digital inputs, which means that you can, in most situations use a diode XOR as a true analogue XOR and perform addition modulo2 like any other ring mod or polarised vca etc\
+\
+Diode MEDIAN analogue SQRT but only 3 input?\
+\
+}

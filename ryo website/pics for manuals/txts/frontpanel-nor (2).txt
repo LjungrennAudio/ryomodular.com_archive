@@ -1,0 +1,31 @@
+RYO Discrete TRL Boolean Logics
+NOR/OR
+ 
+1. Gate one input 1
+
+2. Gate one input 2
+
+3. Gate one input 3
+
+4. Gate one NOR output
+
+5. Gate one OR output (normalled to Gate two input 1)
+
+6. Gate two input 1
+
+7. Gate two input 2
+
+8. Gate two NOR output
+
+9. Gate two OR output
+
+[Try dif input amplitudes, waveforms and frequency rates including audio into inputs!]
+
+Width: 4 hp
+
+
+
+
+
+
+

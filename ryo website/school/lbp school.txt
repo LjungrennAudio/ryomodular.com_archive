@@ -1,0 +1,21 @@
+2.1. Basic Addition
+Given that the following is true:
+o = i1 + i1 = 100 - ( 100 - i1 - i2 )
+It's clear we can add numbers together, using nothing but the in-built subtraction function. To clarify, rather than adding both numbers together, we subtract them both from 100, then subtract the answer from 100. So given values of 23 and 34, normally our calculation would be something like:
+o = i1 + i2
+o = 43
+Using the equation above:
+o = 100 - ( 100 - i1 - i2 )
+o = 100 - ( 100 - 23 - 34 )
+o = 100 - ( 100 - 57 )
+o = 100 - ( 43 )
+o = 57
+Obviously this looks long-winded when written down like that, but this is what happens when your toolsets are limited. You have to be a little less direct with your solutions. The circuit for this equation is shown below (note that the battery in the image is set to 100%):
+
+
+addit1
+
+2.2. Assumptions
+This circuit will return the arithmetically correct answer for the sum of its inputs if the following conditions are met:
+All inputs are greater than zero.
+That the sum of the inputs is smaller than, or equal to 100.

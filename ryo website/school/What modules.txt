@@ -1,0 +1,38 @@
+Although there are absolutely no rules concerning what modules you should buy and how to use them, if you are a total novice you may find certain modules appear to be unnecessary even though you've read about what they do, or alternatively have the impression that certain modules are essential when in fact their functions can be achieved from patching other basic modules.
+
+I would suggest you consider some of the following module features when starting out, since i would hope you can avoid wasting money or finding yourself unable to produce certain results:
+
+*VCOs with Multiple waveform outs, i.e. Sine, Saw and Square as a minimum.
+*The ability to have your VCOs run at a low enough frequency to act as LFOs as well as standard VCOs.
+*Waveshaping functions built into a VCO can also be very valuable since they are commonly found on VCOs and will often save you buying separate modules at greater expense until you find them absolutely necessary. if you can find such modules within your budget i would suggest two as a minimum since this will give you the option of a range of FM, AM, audio rate PWM, and filter modulation patches as well as the variety of waveshaping and tremelo/vibrato patches otherwise achieved with separate LFOs.
+
+*it is oft said in the world of modular synthesis, "you can never have too many VCAs". this is because any parameter on a module that doesnt have direct cv control will need an external VCA to provide that cv control required - hence at least two VCAs, preferable one with Linear and Log. or Exp. inputs to allow a variety of different uses involving both audio and cv manipultaion.
+
+_worth saying here, keep an eye out for modules that are 'DC coupled' - it basically means they can handle CV as well as audio signals - very valuable._
+
+*Multiple cv and audio inputs can be very hand since they will allow not only more complex patching as far as basic sound shaping goes, but also to do AM and vibrato.
+*I suggest at least two VCAs because to achieve more complex FM patches with pitch tracking or to control certain cv's within a patch as well as the final amplitude profile will necessitate multiple VCAs.
+
+*A Multimode Filter with resonance, and hopefully two independent cutoff inputs.
+*Since you will want a variety of filters, a multimode should provide LPF, HPF, BP and even Notch options, the resonance is such an important aspect of a filter's sonic palette that it is a great thing to have.
+*Multiple cutoff inputs allows for things like Filter Modulation on top of contour shaping with an envelope or LFO, as well as patching tricks that are common to many patches found in the patch ideas on this website as well as elsewhere.
+
+*At least 2 envelopes, one full ADSR or complex envelope.
+*although you'll often just need one of the envelopes to shape a filter, provide waveshaping sweeps or make a VCA/LPG pluck and hence could be a simple AR or ASR, at least one envelope that has a complex contour such as an ADSR, preferably with cycling/looping options, and maybe even delay, reset, retrigger, hold or other functions can greatly enhance your patching options with no need for extra expense in future.
+
+*I will add a corollary to the above, which is, a voltage controlled slope or 'swiss army' module such as a Voltage Controlled Slope (VCS) is a great alternative to a second envelope/contour generator since it will act as a slew, subharmonic oscillator, envelope, envelope follower and allsorts of other things - a great money and space saver.
+
+*Mixers and Multiples, etc.. Although utilities modules aren't glamourous, they are the absolute necessities when your patching gets past basic east coast monosynth stuff;
+*At least one mixer with 3 or 4 channels into an output - preferably two mixers, a linear CV mixer and an exponential audio mixer.
+*A multiple is another essential unless you are lucky enough to have stackable cables - though a passive multiple or stackables aren't great for complex patching due to voltage droops, so you will find a buffered multiple far more valuable.
+*Attenuators, Polarisers and Bias shifters are incredibly useful too, though if you are trying to build a smaller/cheaper system to start off with, it's wise to try and find Mixers/Mults with polarising options and ensure as many of your modules have built in attenuators on the cv inputs as possible.
+
+*the following are not quite essentials so much, but probably would be the other things that round off a great starter system:
+
+*A Ring Modulator - preferably find one with DC as well as AC-coupling (allows you to do stuff with cv's as well as audio signals)
+*A dedicated Slew Limiter (it can suck having to use your VCS to do such a basic task. if you're getting a separate slew module, look for cv control over time and on/off options to allow for complex patching options)
+*A Noise/S+H - Noise sources and 'Sample & Hold/Track & Hold' often are combined into one module, and act as everything from a source of hissy white/pink/red noise, random cv signals, sequencer/pitch sources to stuff you've yet to even imagine.
+
+*A very important consideration is to look for as much cv control as possible - the whole point of a modular is to be able to connect up anything to anything wherever possible. what's the point of a modular synth if you can't achieve control and patching of the parameters and functions of as much as you want?
+
+*n.b. these are merely suggestions with explanations why - not rules or even anything you should necessarily bother worrying about if you have your own ideas - you know best what you want to do and how to have fun!

@@ -1,0 +1,20 @@
+Boolean Logic
+
+Discrete Resistor-Transistor-Logic
+ 
+RTL circuit design gives interesting quirks at Dif input amplitudes, waveforms and frequency rates including audit use as an audio waveshaper/distortion.
+
+NOR/OR
+
+The NOR/OR module can be patched as two NOT gates,
+one NOT gate and one 2- or 3-input NOR/OR gate,
+one 2-input NOR/OR gate and one 2- or 3-input NOR/OR gate
+or one 4-input NOR/OR gate.
+ 
+Gate one has three inputs, 
+
+Gate two has two
+
+The OR out from gate one is normalled to input 1 on gate two.
+
+Width: 4 hp

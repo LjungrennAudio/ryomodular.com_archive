@@ -1,0 +1,25 @@
+ .u-section-1 {
+  min-height: 580px;
+}
+
+.u-section-1 .u-image-1 {
+  height: 500px;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.u-section-1 .u-text-1 {
+  font-weight: 400;
+  margin: 10px auto 12px;
+}
+
+.u-section-1 .u-btn-1 {
+  border-style: solid;
+  background-image: none;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-btn-1 {
+    padding: 0;
+  }
+}

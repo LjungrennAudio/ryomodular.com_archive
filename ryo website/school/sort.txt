@@ -1,0 +1,59 @@
+Analogue Sort
+
+There's endless uses for sorting values as with any other logic and therefore likewise with analogue logic the equivalent is even more true as ever - not only is sorting values useful but the resulting cv shaping and audio wave form out puts that can be derived etc. the most basic sort function is to order the inputs by value based on breaking the problem down to smaller and smaller comparisons - otherwise known as 'divide and conquer' sorting. As has been shown, max() and min() enable finding the highest and lowest values from a set of numbers this is also the first step in sorting.
+
+Finding the median Value:
+The method of finding the middle of three value involves the following process:
+	1.	Find all pairs of signals
+	2.	Get the min() value for each pair.
+	3.	Take the max() of these min()s.
+
+
+The concept here is that if you take all possible pairs, you are guaranteed to have one pair that consists of the highest value and the second highest value. This particular pair will return a min() value equal to the second largest value of the three and none of the other min()s can return a larger value.
+
+
+First, identifying the pairs of signals, and their minmum values to give the three intermediary values:
+y1 = min ( x1, x2 )
+y2 = min ( x1, x3 )
+y3 = min ( x2, x3 )
+Then finding the maximums of those values:
+z = max ( y1, y2, y3 )
+
+
+Two relevant points of note, although I've stated this is the middle value of three, it is in fact the method for finding the second largest of a set of values - I.e. expanding the number of inputs does not continue to give the median with this method but the second largest.
+
+also, note that when input values are duplicates, the sort does not actually find the second largest value, it actually sorts the values in descending magnitude and the output is the value of the second index of that ordered list. i.e. generally the output is the actual second largest so the sorting will be correct, but for a sort, "second largest value" is slightly misleading.
+
+Finding the Second Smallest Value:
+A very similar way can be used to find the second smallest value by replacing the max() function for a min() and the min()s for max()s. Although this is redundant with three inputs middle value being middle value, this is relevant when using more inputs:
+
+This 'merge sort' method works for any number of inputs, the number of pairs just increases - instead of only 3 pairs to deal withfor 3 inputs, with four inputs 6 pairs are needed:
+
+( x1, x2 ), ( x1, x3 ), ( x1, x4 ), ( x2, x3 ), ( x2, x4 ), ( x3, x4 )
+ 
+The formula for the number of pairs, which allows us to calculate the number of gates needed, is as follows:
+
+p = [ n ( n-1 ) ] / 2
+
+where
+p is the number of pairs required
+n is the number of inputs
+
+Since this is a  2nd order polynomial (related to the square of n) the sort method becomes exponentially more complex as the number of inputs increases.
+
+
+Sorting into ordered lists
+
+Since  min, max, second smallest and second largest value can be found, a circuit can be made to take 4 analogue input values and output the same four values in descending order (or therefore technically any order you patch them).
+
+
+Finding the nth Largest / Smallest Value
+it's also possible to select the value that is nth largest / smallest value in a set - as with finding the 2nd largest value, values were grouped into pairs, for 3rd largest they are grouped into triplets and for the nth largest they are grouped into groups of size n.
+
+Although the complexity increases even more steeply with input and desired output out complexity it allows the generation of a fully ordered list of values or selecting a specific value from that list. This solves the earlier problem of finding the true Median value from a set.
+
+
+
+There are also methods of sorting based on comparison sort algorythms, which can also be achieved with min and max functions. Basic forms of comparison sort exist, such as Bubble sort, sometimes referred to as sinking sort, that repeatedly steps through a list comparing adjacent elements and swaps them if they are in the wrong order, passes through the list is repeating until the list is sorted.
+
+these comparison sorts are not suitable for finding the value of a specific index in the list, without actually ordering the entire thing, such as the Median, but may be simpler than the number of gates required for high input numbers.

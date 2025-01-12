@@ -1,0 +1,23 @@
+RYO Optodist
+
+1. Manual gain control (sets either amplification/attenuation, vca initial level and/or  overdrive gain).
+
+2. Gain LED (indicates gain or vca initial lvl). 
+
+3. Signal In Knob sets audio input level.
+
+4. Gain CV Knob - attenuator for gain control cv input.
+
+5. LED based limiter circuit (limits the signal thru a set of 4 LEDs).
+
+6. CV Input (attenuator - gain cv) either opens VCA or increases distortion.
+
+7. Limiter on/off switch - engaging the LED clipping will alter character of the distortion.
+
+8. Audio Input. 
+
+9. Audio Output.
+
+Width: 6hp
+
+
